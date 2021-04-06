@@ -66,6 +66,7 @@ class Snake {
     })
   }
 
+  // TODO: drawSnakeの使い回しなのでlineごとで明るさが違う
   flash() {
     this.fadeTime = 0
   }
