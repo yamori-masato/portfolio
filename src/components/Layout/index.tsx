@@ -13,7 +13,7 @@ const Layout: FC = ({children}) => {
     <div>
       <Header />
       <Background />
-      <StyledMain>
+      <StyledMain id="scroll-container">
         {children}
       </StyledMain>
     </div>
