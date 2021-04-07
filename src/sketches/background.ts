@@ -26,7 +26,7 @@ const sketch = (p: p5) => {
     z.update()
     z.display()
   }
-  p.mouseClicked = () => {
+  p.mousePressed = () => {
     z.flash()
   }
 
