@@ -8,7 +8,7 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 3.4rem;
   color: #fff;
   user-select: none;
 `
@@ -24,8 +24,28 @@ const StyledNav = styled.nav`
     list-style: none;
     padding: 0;
     li {
-      font-size: 1.4rem;
-      margin-left: 30px;
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-left: 4rem;
+      position: relative;
+
+      a {
+        position: relative;
+        padding-bottom: 2px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          width: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          border-bottom: solid 1px yellow;
+          transition: all 0.3s;
+        }
+        &:hover:before {
+          width: 3rem;
+        }
+      }
     }
   }
 `
@@ -38,9 +58,9 @@ const Header: FC = () => {
       </StyledLogo>
       <StyledNav>
         <ul>
-          <li><a href="#">Top</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">WORKS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </StyledNav>
     </StyledHeader>
