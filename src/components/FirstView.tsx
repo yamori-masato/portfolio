@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ScrollNav from './ScrollNav'
+import { sp, tab } from 'media'
 
 const StyledSection = styled.section`
   position: relative;
@@ -20,6 +21,14 @@ const StyledSection = styled.section`
     font-size: 3rem;
     letter-spacing: 40px;
     user-select: none;
+    ${tab`
+      letter-spacing: 3.3vw;
+      font-size: 2.8rem;
+    `}
+    ${sp`
+      letter-spacing: 3.3vw;
+      font-size: 1.8rem;
+    `}
   }
 
   a {
