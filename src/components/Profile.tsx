@@ -26,7 +26,9 @@ const StyledContainer = styled.div`
         font-size: 1.6rem;
         line-height: 1.9;
         margin: 0;
+        word-break: break-word; /* TODO: word-breakをやめたい */
         overflow-wrap: break-word;
+        word-wrap: break-word;
 
         span {
           padding-right: 1rem;
