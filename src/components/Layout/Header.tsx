@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { pc, sp, tab } from 'media'
+import GlobalNav from './GlobalNav'
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -18,51 +20,13 @@ const StyledLogo = styled.a`
   margin: 30px 0;
 `
 
-const StyledNav = styled.nav`
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    li {
-      font-weight: 600;
-      font-size: 1.6rem;
-      margin-left: 4rem;
-      position: relative;
-
-      a {
-        position: relative;
-        padding-bottom: 2px;
-        &:before {
-          content: "";
-          position: absolute;
-          top: 100%;
-          width: 0;
-          left: 50%;
-          transform: translate(-50%, 0);
-          border-bottom: solid 1px yellow;
-          transition: all 0.3s;
-        }
-        &:hover:before {
-          width: 3rem;
-        }
-      }
-    }
-  }
-`
-
 const Header: FC = () => {
   return (
     <StyledHeader>
       <StyledLogo href="#">
         Portfolio
       </StyledLogo>
-      <StyledNav>
-        <ul>
-          <li><a href="#">TOP</a></li>
-          <li><a href="#">WORKS</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </StyledNav>
+      <GlobalNav />
     </StyledHeader>
   )
 }
