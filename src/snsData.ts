@@ -1,9 +1,14 @@
+import qiita from 'assets/images/qiita.svg'
+import twitter from 'assets/images/twitter.svg'
+import github from 'assets/images/github.svg'
+import zenn from 'assets/images/zenn.svg'
+
 export const snsData = [
   {
     name: "github",
     link: "https://github.com/yamori-masato",
     svg: {
-      url: "./images/github.svg",
+      url: github,
       style: {
         fill: "#fff",
         background: "#181717"
@@ -14,7 +19,7 @@ export const snsData = [
     name: "zenn",
     link: "https://zenn.dev/yamo",
     svg: {
-      url: "./images/zenn.svg",
+      url: zenn,
       style: {
         fill: "#3EA8FF",
         background: "#323030",
@@ -26,7 +31,7 @@ export const snsData = [
     name: "qiita",
     link: "https://qiita.com/yamooo",
     svg: {
-      url: "./images/qiita.svg",
+      url: qiita,
       style: {
         fill: "#fff",
         background: "#55c500",
@@ -38,7 +43,7 @@ export const snsData = [
     name: "twitter",
     link: "",
     svg: {
-      url: "./images/twitter.svg",
+      url: twitter,
       style: {
         fill: "#fff",
         background: "#1DA1F2",
