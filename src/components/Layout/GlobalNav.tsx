@@ -45,9 +45,9 @@ const GlobalNav = () => {
   return (
     <StyledNav>
       <ul>
-        <li><a href="#">TOP</a></li>
-        <li><a href="#">WORKS</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#" className="cursor">TOP</a></li>
+        <li><a href="#" className="cursor">WORKS</a></li>
+        <li><a href="#" className="cursor">CONTACT</a></li>
       </ul>
     </StyledNav>
   )

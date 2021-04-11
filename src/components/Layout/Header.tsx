@@ -23,7 +23,7 @@ const StyledLogo = styled.a`
 const Header: FC = () => {
   return (
     <StyledHeader>
-      <StyledLogo href="#">
+      <StyledLogo href="#" className="cursor">
         Portfolio
       </StyledLogo>
       <GlobalNav />

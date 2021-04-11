@@ -34,7 +34,13 @@ export type TSns = {
 
 const SnsIcon: FC<TSns> = ({ name, link, svg }) => {
   return (
-    <StyledLink href={link} background={svg.style?.background} target="_blank" rel="noopener noreferrer">
+    <StyledLink
+      href={link}
+      background={svg.style?.background}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="cursor"
+    >
       <ReactSVG
         src={svg.url}
         style={svg.style}

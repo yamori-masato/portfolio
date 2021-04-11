@@ -1,5 +1,19 @@
 @import-normalize;
 
+@keyframes cursor {
+  0% {  cursor: url('assets/images/cursor/23x23.png') 11 11, auto; }
+  10% {  cursor: url('assets/images/cursor/25x25.png') 12 12, auto; }
+  20% {  cursor: url('assets/images/cursor/27x27.png') 13 13, auto; }
+  30% {  cursor: url('assets/images/cursor/29x29.png') 14 14, auto; }
+  40% {  cursor: url('assets/images/cursor/31x31.png') 15 15, auto; }
+  50% {  cursor: url('assets/images/cursor/33x33.png') 16 16, auto; }
+  60% {  cursor: url('assets/images/cursor/35x35.png') 17 17, auto; }
+  70% {  cursor: url('assets/images/cursor/37x37.png') 18 18, auto; }
+  80% {  cursor: url('assets/images/cursor/39x39.png') 19 19, auto; }
+  90% {  cursor: url('assets/images/cursor/41x41.png') 20 20, auto; }
+  100% {  cursor: url('assets/images/cursor/43x43.png') 21 21, auto; }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +30,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
+  animation: cursor ease-out 150ms 1 reverse;
+  cursor: url('assets/images/cursor/23x23.png') 11 11, auto;
+}
+
+.cursor:hover {
+  animation: cursor ease-out 150ms 1;
+  cursor: url('assets/images/cursor/43x43.png') 21 21, auto;
 }
 
 a {

@@ -62,7 +62,7 @@ const ScrollNav: FC<Props> = ({text}) => {
       smooth={true}
       containerId="scroll-container"
     >
-      <StyledContainer>
+      <StyledContainer className="cursor">
         <StyledText>{text}</StyledText>
         <StyledTriangle/>
       </StyledContainer>
