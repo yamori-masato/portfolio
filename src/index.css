@@ -13,6 +13,7 @@
   90% {  cursor: url('assets/images/cursor/41x41.png') 20 20, auto; }
   100% {  cursor: url('assets/images/cursor/43x43.png') 21 21, auto; }
 }
+/* TODO: ホバーを外した時に逆向きでアニメーションさせたい */
 
 * {
   box-sizing: border-box;
