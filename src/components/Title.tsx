@@ -1,13 +1,17 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { pc, sp, tab } from 'media'
 
 const StyledContainer = styled.div`
   h2 {
     display: inline-block;
     position: relative;
     color: #fff;
-    font-size: 1.8rem;
     user-select: none;
+    font-size: 1.8rem;
+    ${sp`
+      font-size: 1.6rem;
+    `}
 
     :after {
       content: '';

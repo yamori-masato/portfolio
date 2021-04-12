@@ -1,10 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { pc, sp, tab } from 'media'
 
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: 1.6rem;
+  line-height: 1.9;
+  ${sp`
+    font-size: 1.4rem;
+  `}
 
   ul {
     width: 80%;
@@ -15,16 +22,24 @@ const StyledContainer = styled.div`
     justify-content: flex-start;
     list-style: none;
 
+    ${tab`
+      width: 100%;
+    `}
+    ${sp`
+      width: 100%;
+    `}
+
     li {
       margin-bottom: 2rem;
+      ${sp`
+        margin-bottom: 1.2rem;
+      `}
       &:last-child {
         margin-bottom: 0;
       }
 
       p {
         color: #fff;
-        font-size: 1.6rem;
-        line-height: 1.9;
         margin: 0;
         word-break: break-word; /* TODO: word-breakをやめたい */
         overflow-wrap: break-word;

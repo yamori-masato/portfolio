@@ -1,8 +1,12 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { sp } from 'media'
 
 const StyledContainer = styled.div`
   width: 200px;
+  ${sp`
+    width: 150px; 
+  `}
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +15,7 @@ const StyledContainer = styled.div`
 
   p {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
   }
 `
