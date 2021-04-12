@@ -10,7 +10,7 @@ const StyledSection = styled.section`
   display: flex;
   align-items: center;
   user-select: none;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 
   h1 {
     width: 100%;
