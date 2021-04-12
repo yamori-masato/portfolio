@@ -14,18 +14,8 @@ const StyledHeader = styled.div`
   color: #fff;
   user-select: none;
 
-  padding: 0 3.4rem;
-  height: calc(3.4rem * 2.6);
-
-  ${tab`
-    padding: 0 2.8rem;
-    height: calc(2.8rem * 2.7);
-  `}
-
-  ${sp`
-    padding: 0 2.2rem;
-    height: calc(2.2rem * 3.6);
-  `}
+  padding: 0 2.2rem;
+  height: 66px;
 `
 
 const StyledLogo = styled.a`
