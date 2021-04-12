@@ -33,6 +33,7 @@ body {
   overflow-y: hidden;
   animation: cursor ease-out 150ms 1 reverse;
   cursor: url('assets/images/cursor/23x23.png') 11 11, auto;
+  background-color: #000;
 }
 
 .cursor:hover {
