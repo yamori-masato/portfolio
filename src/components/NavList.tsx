@@ -2,60 +2,61 @@ import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { tab } from 'media'
+import UnderlinedText from './UnderlinedText'
 
 // TODO: 汎用化
 const StyledUl = styled.nav<{isMobile: boolean}>`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   list-style: none;
   padding: 0;
   li {
     margin-left: 4rem;
     a {
-      position: relative;
-      padding-bottom: 4px;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        width: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        border-bottom: solid 1px yellow;
-        transition: all 0.3s;
-      }
-      &:hover:before {
-        width: 3rem;
-        width: 80%;
-      }
+      display: block;
     }
   }
 
-  ${({ isMobile }) => isMobile ? mobileStyle : pcStyle}
-`
+  ${({ isMobile }) => isMobile && css`
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-const pcStyle = css`
-  flex-direction: row;
-  font-weight: 600;
-  font-size: 1.6rem;
-  ${tab`
-    font-size: 1.4rem;
+    li {
+      margin: 0;
+      padding-bottom: 30px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
   `}
 `
 
-const mobileStyle = css`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.6rem;
-  li {
-    margin: 1.4rem;
-    a {
-      padding-bottom: 6px;
-    }
+const StyledText = styled(UnderlinedText) <{ isMobile: boolean }>`
+  height: 2.2rem;
+  &:after {
+    transition: all 300ms;
+    width: 0;
+  }
+  &:hover:after {
+    width: 60%;
+  }
+
+  ${({ isMobile }) => isMobile
+    ? css`
+      font-size: 2.6rem;
+      height: 3.4rem;
+    `
+    : css`
+      font-weight: 600;
+      font-size: 1.6rem;
+      ${tab`
+        font-size: 1.4rem;
+      `}
+    `
   }
 `
-
 
 type Props = {
   isMobile: boolean
@@ -78,7 +79,7 @@ const NavList: FC<Props> = ({ isMobile, onLinkClick }) => {
             className="cursor"
             onClick={onLinkClick}
           >
-            {v.text}
+            <StyledText isMobile={isMobile}>{v.text}</StyledText>
           </Link>
         </li>
       ))}

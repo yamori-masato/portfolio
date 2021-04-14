@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { sp } from 'media'
 
-// TODO: NavListでも使いまわしたい
-const StyledTitle = styled.h2`
-  display: inline-block;
+const StyledTitle = styled.div`
+  display: flex;
+  align-items: center;
   position: relative;
   margin: 0;
   user-select: none;
