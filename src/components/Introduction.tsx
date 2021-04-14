@@ -12,7 +12,6 @@ const StyledSection = styled.section<{offset: number}>`
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  margin-bottom: 20vh;
   box-sizing: content-box;
   padding-top: ${({offset}) => offset}px;
 `
