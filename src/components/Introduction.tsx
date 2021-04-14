@@ -5,6 +5,7 @@ import { Element } from 'react-scroll'
 import UnderlinedText from './UnderlinedText'
 import AvatarContainer from './AvatarContainer'
 import Profile from './Profile'
+import { headerHeight } from 'constants/styles'
 
 const StyledSection = styled.section<{offset: number}>`
   display: flex;
@@ -62,7 +63,6 @@ const Introduction = () => {
   useEffect(() => {
     if (contentRef.current) {
       const contentHeight = contentRef.current.clientHeight
-      const headerHeight = 66
       const top = (vh - contentHeight) / 2
       const newOffset = top > 0 ? headerHeight - top : headerHeight
       setOffset(() => (

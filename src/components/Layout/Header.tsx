@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { pc, sp, tab } from 'media'
 import GlobalNav from './GlobalNav'
+import { headerHeight } from 'constants/styles'
 
 const StyledHeader = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
@@ -15,7 +16,7 @@ const StyledHeader = styled.div`
   user-select: none;
 
   padding: 0 2.2rem;
-  height: 66px;
+  height: ${headerHeight}px;
 `
 
 const StyledLogo = styled.a`
