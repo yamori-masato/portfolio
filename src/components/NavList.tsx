@@ -71,8 +71,8 @@ const NavList: FC<Props> = ({ isMobile, onLinkClick }) => {
 
   return (
     <StyledUl isMobile={isMobile}>
-      {paths.map((v) => (
-        <li>
+      {paths.map((v, i) => (
+        <li key={i.toString()}>
           <Link
             to={v.path}
             className="cursor"
