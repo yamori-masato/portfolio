@@ -11,7 +11,7 @@ const StyledSection = styled.section<{offset: number}>`
   display: flex;
   align-items: center;
   min-height: 100vh;
-  width: 100%;
+  width: 80vw;
   box-sizing: content-box;
   padding-top: ${({offset}) => offset}px;
 `
@@ -42,7 +42,9 @@ const StyledContent = styled.div`
   }
 
   width: 80%;
-  max-width: 1000px;
+  ${pc`
+    max-width: 1000px;
+  `}
   padding: 30px;
   margin-top: 50px;
   ${tab`

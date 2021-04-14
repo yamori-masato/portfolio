@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
   `}
 
   ul {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0;
     display: flex;
