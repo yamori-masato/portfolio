@@ -31,15 +31,15 @@ const StyledTitle = styled.h2`
 `
 
 type Props = {
-  text: string
   className?: string
+  as?: React.ElementType
 }
 
 
-const UnderlinedText: FC<Props> = ({text, className}) => {
+const UnderlinedText: FC<Props> = ({children, className, as='p'}) => {
   return (
-    <StyledTitle className={className}>
-      {text}
+    <StyledTitle className={className} as={as}>
+      {children}
     </StyledTitle>
   )
 }
