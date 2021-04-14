@@ -83,6 +83,7 @@ const Introduction = () => {
     }
   }, [])
 
+  // TODO: Elementをsectionタグにしたい
   return (
     <Element name="introduction">
       <StyledSection offset={offset}>
