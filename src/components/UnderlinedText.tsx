@@ -9,7 +9,7 @@ const StyledTitle = styled.h2`
   margin: 0;
   user-select: none;
 
-  height: 30px;
+  height: 3rem;
   color: #fff;
   font-size: 1.8rem;
   ${sp`
@@ -36,7 +36,7 @@ type Props = {
 }
 
 
-const Title: FC<Props> = ({text, className}) => {
+const UnderlinedText: FC<Props> = ({text, className}) => {
   return (
     <StyledTitle className={className}>
       {text}
@@ -44,4 +44,4 @@ const Title: FC<Props> = ({text, className}) => {
   )
 }
 
-export default Title
+export default UnderlinedText

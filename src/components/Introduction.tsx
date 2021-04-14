@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { pc, sp, tab } from 'media'
 import { Element } from 'react-scroll'
-import Title from './Title'
+import UnderlinedText from './UnderlinedText'
 import AvatarContainer from './AvatarContainer'
 import Profile from './Profile'
 
@@ -87,7 +87,7 @@ const Introduction = () => {
     <Element name="introduction">
       <StyledSection offset={offset}>
         <StyledContainer ref={contentRef}>
-          <Title text="ABOUT ME" />
+          <UnderlinedText text="ABOUT ME" />
           <StyledContent>
             <AvatarContainer />
             <Profile />
