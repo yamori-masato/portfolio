@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { tab } from 'media'
 
@@ -58,14 +59,31 @@ const mobileStyle = css`
 
 type Props = {
   isMobile: boolean
+  onLinkClick?: () => void
 }
 
-const NavList: FC<Props> = ({isMobile}) => (
-  <StyledUl isMobile={isMobile}>
-    <li><a href="#" className="cursor">TOP</a></li>
-    <li><a href="#" className="cursor">WORKS</a></li>
-    <li><a href="#" className="cursor">CONTACT</a></li>
-  </StyledUl>
-)
+const NavList: FC<Props> = ({ isMobile, onLinkClick }) => {
+  const paths = [
+    { text: "TOP", path: "/" },
+    { text: "WORKS", path:  "/works" },
+    { text: "CONTACT", path: "/contact" },
+  ]
+
+  return (
+    <StyledUl isMobile={isMobile}>
+      {paths.map((v) => (
+        <li>
+          <Link
+            to={v.path}
+            className="cursor"
+            onClick={onLinkClick}
+          >
+            {v.text}
+          </Link>
+        </li>
+      ))}
+    </StyledUl>
+  )
+}
 
 export default NavList

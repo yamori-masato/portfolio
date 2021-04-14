@@ -35,7 +35,10 @@ const DrawerMenu = () => {
       <StyledWrapper
         isOpen={isOpen}
       >
-        <NavList isMobile={true} />
+        <NavList
+          isMobile={true}
+          onLinkClick={ () => setIsOpen(false) }
+        />
       </StyledWrapper>
       <Burger
         onClick={() => { setIsOpen(prev => !prev) }}
