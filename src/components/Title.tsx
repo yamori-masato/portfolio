@@ -1,42 +1,46 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { sp } from 'media'
 
-const StyledContainer = styled.div`
-  h2 {
-    display: inline-block;
-    position: relative;
-    color: #fff;
-    user-select: none;
-    font-size: 1.8rem;
-    ${sp`
-      font-size: 1.6rem;
-    `}
+// TODO: NavListでも使いまわしたい
+const StyledTitle = styled.h2`
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  user-select: none;
 
-    :after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: -15px;
-      transform: translateX(-50%);
-      width: 58%;
-      height: 1px;
-      background-color: yellow;
-      border-radius: 2px;
-    }
+  height: 30px;
+  color: #fff;
+  font-size: 1.8rem;
+  ${sp`
+    font-size: 1.6rem;
+  `}
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    background-color: yellow;
+    border-radius: 2px;
+    height: 1px;
+    width: 58%;
   }
 `
 
 type Props = {
   text: string
+  className?: string
 }
 
 
-const Title: FC<Props> = ({text}) => {
+const Title: FC<Props> = ({text, className}) => {
   return (
-    <StyledContainer>
-      <h2>{text}</h2>
-    </StyledContainer>
+    <StyledTitle className={className}>
+      {text}
+    </StyledTitle>
   )
 }
 
