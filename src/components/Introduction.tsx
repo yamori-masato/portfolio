@@ -79,7 +79,6 @@ const Introduction = () => {
     } // TODO: innerHeightが正しいか検証
     window.addEventListener('resize', onResize)
     return () => {
-      console.log('removeEventListener')
       window.removeEventListener('resize', onResize)
     }
   }, [])
