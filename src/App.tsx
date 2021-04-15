@@ -7,6 +7,7 @@ import {
 import {
   Top,
   Works,
+  WorkDetail,
 } from 'pages'
 import Layout from 'components/Layout'
 import ScrollToTop from './ScrollToTop'
@@ -19,6 +20,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Top} />
           <Route exact path="/works" component={Works} />
+          <Route exact path="/works/:id" component={WorkDetail} />
         </Switch>
       </Layout>
     </Router>
