@@ -24,7 +24,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledContent = styled.div`
-  min-height: 50vh;
+  min-height: 500px;
   background-color: rgba(15, 15, 15, 0.7);
   display: flex;
 
