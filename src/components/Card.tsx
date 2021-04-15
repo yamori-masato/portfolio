@@ -30,12 +30,13 @@ const StyledImgOverlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #dfdfdf, #000);
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.01) 51%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.6) 100%); /* TODO: グラデーション生成ツールで正確につくる */
 
   opacity: 0;
   transition: 0.3s ease;
   ${StyledCard}:hover & {
-    opacity: 0.8;
+    opacity: 1;
   }
 `
 
