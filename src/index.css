@@ -44,6 +44,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: url('assets/images/cursor/23x23.png') 11 11, auto;
 }
 
 code {
