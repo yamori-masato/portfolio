@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import YouTube from 'react-youtube'
 
-// TODO: Cardと共通化
+// TODO: Imageを使いたい
 const StyledBase = styled.div`
   width: 100%;
   .wrapper {
