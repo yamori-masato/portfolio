@@ -5,7 +5,6 @@ import YouTube from 'react-youtube'
 // TODO: Cardと共通化
 const StyledBase = styled.div`
   width: 100%;
-  height: 100%;
   .wrapper {
     background-color: rgba(15, 15, 15, 0.7);
     position: relative;
