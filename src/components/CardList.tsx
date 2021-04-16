@@ -32,7 +32,12 @@ const CardList = () => {
     <StyledGrid>
       {works.map((v, i) => (
         <li key={i.toString()}>
-          <Card {...v}/>
+          <Card
+            id={v.id}
+            title={v.title}
+            genre={v.genre}
+            thumbnail={v.thumbnail.image}
+          />
         </li>
       ))}
     </StyledGrid>
