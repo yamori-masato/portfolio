@@ -24,8 +24,8 @@ const StyledContainer = styled.div`
 `
 
 const StyledContent = styled.div`
-  min-height: 500px;
   background-color: rgba(15, 15, 15, 0.7);
+  border-radius: 8px;
   display: flex;
 
   & > div:first-child {
@@ -45,7 +45,7 @@ const StyledContent = styled.div`
   ${pc`
     max-width: 1000px;
   `}
-  padding: 30px;
+  padding: 55px 30px;
   margin-top: 50px;
   ${tab`
     flex-direction: column;
