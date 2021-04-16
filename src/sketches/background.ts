@@ -19,7 +19,7 @@ const sketch = (p: p5) => {
   }
   p.draw = () => {
     count++
-    p.background(0)
+    p.background(5)
     if (count < delay) return
     if (count === delay+30) z.toggleMove()
 
