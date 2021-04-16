@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const StyledCard = styled.div`
   color: #fff;
-  background-color: rgba(15, 15, 15, 0.7);
+  background-color: var(--ui-background);
   position: relative;
   width: 100%;
   margin: 0;

@@ -24,7 +24,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledContent = styled.div`
-  background-color: rgba(15, 15, 15, 0.7);
+  background-color: var(--ui-background);
   border-radius: 8px;
   display: flex;
 

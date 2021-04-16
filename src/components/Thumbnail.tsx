@@ -6,7 +6,7 @@ import YouTube from 'react-youtube'
 const StyledBase = styled.div`
   width: 100%;
   .wrapper {
-    background-color: rgba(15, 15, 15, 0.7);
+    background-color: var(--ui-background);
     position: relative;
     width: 100%;
     margin: 0;
