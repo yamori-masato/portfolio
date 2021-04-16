@@ -1,30 +1,21 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import Image from './Image'
 
 const StyledCard = styled.div`
   color: #fff;
-  background-color: var(--ui-background);
   position: relative;
   width: 100%;
   margin: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  border-radius: 8px;
 
+  /* Link */
   a {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
   }
-`
-
-const StyledImg = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.85);
 `
 
 const StyledImgOverlay = styled.div`
@@ -43,6 +34,7 @@ const StyledImgOverlay = styled.div`
 
 const StyledInfo = styled.div`
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   padding: 6%;
@@ -83,7 +75,7 @@ type Props = {
 const Card: FC<Props> = (props) => {
   return (
     <StyledCard>
-      <StyledImg src={props.thumbnail} alt={props.title}/>
+      <Image src={props.thumbnail} alt={props.title}/>
       <StyledImgOverlay />
       <StyledInfo>
         <StyledCaption>
