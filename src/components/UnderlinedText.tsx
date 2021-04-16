@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { sp } from 'media'
 
 const StyledTitle = styled.div`
+  width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
