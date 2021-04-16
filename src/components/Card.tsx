@@ -24,7 +24,7 @@ const StyledImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.85)
+  filter: brightness(0.85);
 `
 
 const StyledImgOverlay = styled.div`
@@ -77,7 +77,7 @@ type Props = {
   id: number
   thumbnail: string
   title: string
-  genre: string
+  genre: string[]
 }
 
 const Card: FC<Props> = (props) => {
@@ -88,7 +88,7 @@ const Card: FC<Props> = (props) => {
       <StyledInfo>
         <StyledCaption>
           <figcaption>{props.title}</figcaption>
-          <p>{props.genre}</p>
+          <p>{props.genre.join(' / ')}</p>
         </StyledCaption>
       </StyledInfo>
       <Link to={`/works/${props.id}`} className="cursor"/>
