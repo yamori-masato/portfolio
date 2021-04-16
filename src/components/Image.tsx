@@ -1,6 +1,10 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
+const StyledContainer = styled.div`
+  width: 100%;
+`
+
 const StyledImgWrapper = styled.div`
   background-color: var(--ui-background);
   position: relative;
@@ -23,11 +27,11 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement>
 // divで囲むことで親から「& > * { width: 100px }」のように指定できる
 const Image: FC<Props> = (props) => {
   return (
-    <div>
+    <StyledContainer>
       <StyledImgWrapper>
         <StyledImg {...props} />
       </StyledImgWrapper>
-    </div>
+    </StyledContainer>
   )
 }
 
