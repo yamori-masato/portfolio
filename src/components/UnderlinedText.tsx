@@ -4,6 +4,7 @@ import { sp } from 'media'
 
 const StyledTitle = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   margin: 0;
