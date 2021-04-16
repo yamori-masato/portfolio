@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Avatar from './Avatar'
 import SnsIconList from './SnsIconList'
-import { snsData } from 'snsData'
+import { snsData } from 'data/sns'
 import headShot from 'assets/images/headShot.jpg'
 
 const StyledAvatarContainer = styled.div`

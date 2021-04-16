@@ -1,7 +1,7 @@
-import qiita from 'assets/images/qiita.svg'
-import twitter from 'assets/images/twitter.svg'
-import github from 'assets/images/github.svg'
-import zenn from 'assets/images/zenn.svg'
+import qiita from 'assets/images/logo/qiita.svg'
+import twitter from 'assets/images/logo/twitter.svg'
+import github from 'assets/images/logo/github.svg'
+import zenn from 'assets/images/logo/zenn.svg'
 
 export const snsData = [
   {
