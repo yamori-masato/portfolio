@@ -3,7 +3,7 @@ import twitter from 'assets/images/logo/twitter.svg'
 import github from 'assets/images/logo/github.svg'
 import zenn from 'assets/images/logo/zenn.svg'
 
-export const snsData = [
+export const snsData: schema.Sns[] = [
   {
     name: "github",
     link: "https://github.com/yamori-masato",
