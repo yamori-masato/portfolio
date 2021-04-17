@@ -49,7 +49,7 @@ const WorkAbout: FC<Props> = (props) => {
         <li><span>Genre:</span>{props.genre.join('/')}</li>
         <li><span>Role:</span>{props.role.join('/')}</li>
         <li><span>Skills:</span>{props.skills.join('/')}</li>
-        <li><span>Period:</span>{props.period}months</li>
+        <li><span>Period:</span>{props.period}</li>
       </ul>
     </StyledContainer>
   )
