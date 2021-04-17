@@ -2,30 +2,53 @@ import React, { FC, useEffect, useState } from 'react'
 import PageWrapper from './PageWrapper'
 import styled from 'styled-components'
 import { pc, sp, tab } from 'media'
+import useMediaQuery from 'hooks/useMediaQuery'
 import { headerHeight } from 'constants/styles'
 import works from 'data/works'
 import { RouteComponentProps } from 'react-router-dom'
 import Thumbnail from 'components/Thumbnail'
+import WorkAbout from 'components/WorkAbout'
+import WorkContent from 'components/WorkContent'
 
-// TODO: Workと共通化
 const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 85%;
+  ${sp`
+    width: 90%;  
+ `}
   min-height: 100%;
-  width: 70%;
-  max-width: 1000px;
   margin: 0 auto;
+
   padding-top: calc(${headerHeight}px + 20px);
   ${sp`
     padding-top: calc(${headerHeight}px + 20px);
   `}
+`
+
+// TODO: Workと共通化
+const StyledMainContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  ${pc`
+    width: calc(100% - 310px);
+  `}
+`
+
+const StyledSideContainer = styled.aside`
+  width: 280px;
 `
 
 type Props = RouteComponentProps<{id: string}> & { } 
 
 const WorkDetail: FC<Props> = (props) => {
   const [work, setWork] = useState<schema.Work | undefined>(undefined)
+  const mq = useMediaQuery()
   useEffect(() => {
     const selected = works.find(w => (w.id.toString() === props.match.params.id))
     setWork(selected)
@@ -34,7 +57,15 @@ const WorkDetail: FC<Props> = (props) => {
   return work ? (
     <PageWrapper>
       <StyledContainer>
-        <Thumbnail image={work.thumbnail} video={work?.video}/>
+        {mq.isPc && (
+          <StyledSideContainer>
+            <WorkAbout {...work}/>
+          </StyledSideContainer>
+        )}
+        <StyledMainContainer>
+          <Thumbnail image={work.thumbnail.image} video={work.thumbnail.video} />
+          <WorkContent {...work}/>
+        </StyledMainContainer>
       </StyledContainer>
     </PageWrapper>
   ) : (<></>)
