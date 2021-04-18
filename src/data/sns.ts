@@ -41,7 +41,7 @@ export const snsData: schema.Sns[] = [
   },
   {
     name: "twitter",
-    link: "",
+    link: "https://twitter.com/tokage___sippo",
     svg: {
       url: twitter,
       style: {
