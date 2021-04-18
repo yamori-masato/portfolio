@@ -88,7 +88,7 @@ const Introduction = () => {
     <Element name="introduction">
       <StyledSection offset={offset}>
         <StyledContainer ref={contentRef}>
-          <UnderlinedText as="h1">ABOUT ME</UnderlinedText>
+          <UnderlinedText as="h2">ABOUT ME</UnderlinedText>
           <StyledContent>
             <AvatarContainer />
             <Profile />
