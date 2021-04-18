@@ -27,6 +27,7 @@ const sketch = (p: p5) => {
     z.display()
   }
   p.mousePressed = () => {
+    if (!z) return // FIXME: 原因はわからないがロード後すぐにタッチするとエラーが走る
     z.flash()
   }
 
