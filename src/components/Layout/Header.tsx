@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
 import GlobalNav from './GlobalNav'
 import { headerHeight } from 'constants/styles'
+import { useHistory } from 'react-router-dom'
 
 const StyledHeader = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
@@ -19,14 +19,22 @@ const StyledHeader = styled.div`
   height: ${headerHeight}px;
 `
 
-const StyledLogo = styled.a`
+const StyledLogo = styled.div`
   font-size: 1.6rem;
+  font-weight: bold;
 `
 
 const Header: FC = () => {
+  const history = useHistory()
   return (
     <StyledHeader>
-      <StyledLogo href="#" className="cursor">
+      <StyledLogo
+        className="cursor"
+        onClick={() => {
+          history.push('/')
+          // TODO: ここでp5にpropsを渡して再描画させる
+        }}
+      >
         Portfolio
       </StyledLogo>
       <GlobalNav />
