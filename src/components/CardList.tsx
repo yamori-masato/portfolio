@@ -17,10 +17,11 @@ const StyledGrid = styled.ul`
   grid-row-gap: 30px;
   ${tab`
     width: 90%;
-    grid-column-gap: 12px;
-    grid-row-gap: 15px;   
+    grid-column-gap: 16px;
+    grid-row-gap: 18px;   
   `}
   ${sp`
+    width: 90%;
 	  grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 15px;

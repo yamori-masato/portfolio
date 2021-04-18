@@ -11,7 +11,6 @@ const StyledSection = styled.section<{offset: number}>`
   display: flex;
   align-items: center;
   min-height: 100vh;
-  width: 80vw;
   box-sizing: content-box;
   padding-top: ${({offset}) => offset}px;
 `
