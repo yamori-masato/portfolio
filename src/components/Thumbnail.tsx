@@ -29,7 +29,6 @@ type Props = {
 }
 
 const Thumbnail: FC<Props> = (props) => {
-  console.log(props.video)
   return (
     <StyledBase>
       {
