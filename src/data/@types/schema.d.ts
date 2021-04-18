@@ -25,8 +25,8 @@ declare namespace schema {
     svg: {
       url: string
       style?: {
-        fill?: string
-        background?: string
+        fill: string
+        background: string
         transform?: string
       }
     },
