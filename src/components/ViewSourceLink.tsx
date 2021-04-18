@@ -18,6 +18,7 @@ const ViewSourceLink = () => {
         svg={github.svg.url}
         style={github.svg.style}
         size={16}
+        background={github.svg.style?.background}
       />
       <div>View source</div>
     </Link>
