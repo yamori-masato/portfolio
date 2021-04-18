@@ -3,7 +3,7 @@ declare namespace schema {
     id: number
     thumbnail: {
       image: string
-      video?: string
+      youtubeId?: string
     }
     title: string
     genre: import('./lib/types').Genre[]

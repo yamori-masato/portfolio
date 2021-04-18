@@ -20,6 +20,7 @@ const works: schema.Work[] = [
     id: 1,
     thumbnail: {
       image: rhythmy,
+      youtubeId: '3pl65K2d82w',
     },
     title: 'rhythmy',
     genre: ['installation'],
@@ -71,7 +72,7 @@ const works: schema.Work[] = [
     id: 2,
     thumbnail: {
       image: tetris,
-      video: 'Rmd2ofFcIuo',
+      youtubeId: 'Rmd2ofFcIuo',
     },
     title: 'Tetris',
     genre: ['game'],
@@ -172,7 +173,7 @@ const works: schema.Work[] = [
         head: 'system',
         images: [d, e],
         description: [
-          `私はTwitterBotとフロントエンド向けのAPIを担当しました。`,
+          `私はTwitterBotとフロントエンド向けのAPIを担当しました。具体的には以下の通りです。`,
           `　① 特定の条件を満たすツイートを定期的に取得し、ツイート時とその6時間後にリプライを送る`,
           `　② 現在チャレンジ中の人数とツイートを返すAPI`,
         ]

@@ -63,7 +63,7 @@ const WorkDetail: FC<Props> = (props) => {
           </StyledSideContainer>
         )}
         <StyledMainContainer>
-          <Thumbnail image={work.thumbnail.image} video={work.thumbnail.video} />
+          <Thumbnail image={work.thumbnail.image} video={work.thumbnail.youtubeId} />
           <WorkContent {...work}/>
         </StyledMainContainer>
       </StyledContainer>
