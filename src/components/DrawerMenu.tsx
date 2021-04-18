@@ -27,6 +27,13 @@ const StyledWrapper = styled.div<{isOpen: boolean}>`
   }
 `
 
+const StyledTouch = styled.div`
+  position: absolute;
+  padding: 36px;
+  right: 0;
+  top: 0;
+`
+
 const DrawerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -41,9 +48,10 @@ const DrawerMenu = () => {
         />
       </StyledWrapper>
       <Burger
-        onClick={() => { setIsOpen(prev => !prev) }}
+        onClick={()=>{}}
         isOpen={isOpen}
       />
+      <StyledTouch onClick={() => { setIsOpen(prev => !prev) }} />
     </div>
   )
 }
