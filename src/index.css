@@ -47,6 +47,12 @@ a {
   cursor: url('assets/images/cursor/23x23.png') 11 11, auto;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
