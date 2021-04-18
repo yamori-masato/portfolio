@@ -17,7 +17,7 @@ const StyledSection = styled.section`
   align-items: center;
 
   & > * {
-    margin-bottom: 3vh;
+    margin-bottom: 2.6vh;
   }
 `
 
