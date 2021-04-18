@@ -77,7 +77,7 @@ const works: schema.Work[] = [
     genre: ['game'],
     role: ['solo'],
     skills: ['Python', 'Illustrator'],
-    period: '1months',
+    period: '2months',
     content: [
       {
         head: 'outline',
