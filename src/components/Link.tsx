@@ -11,6 +11,11 @@ const StyledLink = styled.a`
   border-radius: 6px;
   padding: 6px 12px;
   font-size: 1.4rem;
+  transition: all 200ms;
+
+  &:hover {
+    filter: brightness(1.4);
+  }
 
   & > * {
     margin-right: 10px;
