@@ -65,7 +65,7 @@ const WorkContent: FC<Props> = ({ content }) => {
           <UnderlinedText as="h2">{v.head}</UnderlinedText>
           <Images images={v.images} />
           <StyledDescription>
-            {v.description.map((v, i) => <p>{v}</p>)}
+            {v.description.map((v, i) => <p key={i.toString()}>{v}</p>)}
           </StyledDescription>
         </StyledSection>
       ))}
