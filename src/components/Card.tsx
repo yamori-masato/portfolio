@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { pc, sp, tab } from 'media'
 import { Link } from 'react-router-dom'
 import Image from './Image'
 
@@ -23,13 +24,16 @@ const StyledImgOverlay = styled.div`
   width: 100%;
   height: 100%;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.01) 51%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.6) 100%); /* TODO: グラデーション生成ツールで正確につくる */
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.01) 51%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.55) 90%, rgba(0,0,0,0.6) 100%); /* TODO: グラデーション生成ツールで正確につくる */
 
-  opacity: 0;
-  transition: 0.3s ease;
-  ${StyledCard}:hover & {
-    opacity: 1;
-  }
+  opacity: 1;
+  ${pc`
+    opacity: 0;
+    transition: 0.3s ease;
+    ${StyledCard}:hover & {
+      opacity: 1;
+    }
+  `}
 `
 
 const StyledInfo = styled.div`
@@ -37,16 +41,22 @@ const StyledInfo = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 6%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 6%;
 
-  opacity: 0;
-  transition: 0.3s ease;
-  ${StyledCard}:hover & {
-    opacity: 0.8;
-  }
+  opacity: 1;
+  ${pc`
+    opacity: 0;
+    transition: 0.3s ease;
+    ${StyledCard}:hover & {
+      opacity: 0.8;
+    }
+  `}
+  ${sp`
+    padding: 4%;
+  `}
 `
 
 const StyledCaption = styled.div`
