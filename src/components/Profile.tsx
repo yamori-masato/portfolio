@@ -62,7 +62,7 @@ const Profile = () => {
         <li><p><span>生年月日:</span>2000/12/18</p></li>
         <li><p><span>趣味:</span>バンド</p></li>
         <li><p><span>特技:</span>ドラム(歴6年)</p></li>
-        <li><p><span>ひとこと:</span>ITのモノづくりが好きです。アプリ, ゲーム, クリエイティブコーディング等なんでも興味あります。</p></li>
+        <li><p><span>ひとこと:</span>ITのモノづくりが大好きです。アプリ, ゲーム, クリエイティブコーディング等なんでも興味あります。</p></li>
         <li><p><span>スキル:</span>HTML/CSS/JavaScript/TypeScript/Node/React/Ruby/Rails/Python/Processing/Docker/AWS</p></li>
       </ul>
     </StyledContainer>
