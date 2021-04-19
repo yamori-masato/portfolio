@@ -17,10 +17,54 @@ import enechalle from 'assets/images/works/enechalle/thumbnail.png'
 import enechalle_concept_1 from 'assets/images/works/enechalle/concept_1.png'
 import enechalle_system_1 from 'assets/images/works/enechalle/system_1.png'
 import enechalle_system_2 from 'assets/images/works/enechalle/system_2.png'
+// portfolio
+import portfolio from 'assets/images/works/portfolio/thumbnail.jpg'
 
 const works: schema.Work[] = [
   {
     id: 1,
+    thumbnail: {
+      image: portfolio,
+    },
+    title: 'portfolio',
+    genre: ['web'],
+    role: ['solo'],
+    skills: ['React'],
+    period: '1month',
+    urls: {
+      repository: 'https://github.com/yamori-masato/portfolio',
+    },
+    keywords: ['TypeScript', 'p5.js', 'styled-components'],
+    content: [
+      {
+        head: 'outline',
+        description: [
+          `本サイトです。デザインからコーディングまで1人で行いました。`,
+        ]
+      },
+      {
+        head: 'concept',
+        description: [
+          `コンセプトは「作品の仕様と経緯をわかりやすく伝える」です。`,
+          `その為、作品詳細ページは見やすさにかなりこだわりました。
+          作品それぞれのコンセプトはもちろん、採用した技術や仕組みまでしっかり伝えようと努めました。
+          `,
+          `技術的には「出来るだけUIは自力で実装する」という目標を掲げ制作に取り組みました。`,
+        ]
+      },
+      {
+        head: 'system',
+        description: [
+          `背景のアニメーションはp5.jsで書いています。
+          インタラクティブなサイトにしたいという思いがあったので採用しました。
+          リロードするたびにパターンが変わりクリックすると光ります。
+          `,
+        ]
+      },
+    ]
+  },
+  {
+    id: 2,
     thumbnail: {
       image: rhythmy,
       youtubeId: '3pl65K2d82w',
@@ -68,38 +112,6 @@ const works: schema.Work[] = [
           どうしても諦められなかったのでSocket.ioの型定義を上書きしたりして頑張って自力で型をつけました。`,
           `クリエイティブ系の作品制作は初の試みだったのでビジュアル面においてもかなり苦戦しました。
           音とアニメーションの同期が上手くいかなかったりしましたが、色々なライブラリを試した結果上手くいったのでよかったです。`,
-        ]
-      }
-    ]
-  },
-  {
-    id: 2,
-    thumbnail: {
-      image: tetris,
-      youtubeId: 'Rmd2ofFcIuo',
-    },
-    title: 'Tetris',
-    genre: ['game'],
-    role: ['solo'],
-    skills: ['Python', 'Illustrator'],
-    period: '2months',
-    keywords: ['pygame', 'Tkinter'],
-    content: [
-      {
-        head: 'outline',
-        images: [],
-        description: [
-          `プログラミングを始めてから初めて「作りきった」と思えた作品です。
-          ゲームのロジック自体は簡単ですが、スコアの計算やランキング表示、キー押下時間によって挙動を調整したりかなり細部にまでこだわりました。
-          `
-        ]
-      },
-      {
-        head: 'impression',
-        description: [
-          `プログラミングにハマるきっかけになった作品なので思い入れがあります。
-          操作ひとつにおいても入力時間でスピードが変わったり、回転時に補正がなされていたりと、作る側になって初めて気づく工夫に感動しました。
-          `
         ]
       }
     ]
@@ -168,7 +180,7 @@ const works: schema.Work[] = [
     title: '#エナドリチャレンジ応援わんこ',
     genre: ['web'],
     role: ['backend'],
-    skills: ['Ruby on Rails'],
+    skills: ['Rails'],
     period: '3days',
     urls: {
       site: 'https://twitter.com/enechalleboy'
@@ -211,6 +223,38 @@ const works: schema.Work[] = [
           `,
           `また、これまでバックエンドとフロントエンドの両方を学んできたことでチームに大きく貢献できたかと思います。
           cors関係のエラーや外部API使用時のエラーに素早く対応でき、これまでの成長を感じられました。
+          `
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    thumbnail: {
+      image: tetris,
+      youtubeId: 'Rmd2ofFcIuo',
+    },
+    title: 'Tetris',
+    genre: ['game'],
+    role: ['solo'],
+    skills: ['Python', 'Illustrator'],
+    period: '2months',
+    keywords: ['pygame', 'Tkinter'],
+    content: [
+      {
+        head: 'outline',
+        images: [],
+        description: [
+          `プログラミングを始めてから初めて「作りきった」と思えた作品です。
+          ゲームのロジック自体は簡単ですが、スコアの計算やランキング表示、キー押下時間によって挙動を調整したりかなり細部にまでこだわりました。
+          `
+        ]
+      },
+      {
+        head: 'impression',
+        description: [
+          `プログラミングにハマるきっかけになった作品なので思い入れがあります。
+          操作ひとつにおいても入力時間でスピードが変わったり、回転時に補正がなされていたりと、作る側になって初めて気づく工夫に感動しました。
           `
         ]
       }
