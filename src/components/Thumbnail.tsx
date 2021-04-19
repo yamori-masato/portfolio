@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import YouTube from 'react-youtube'
+import Image from './Image'
 
-// TODO: Imageを使いたい
+// TODO: YoutubeでもImageを使いたい
 const StyledBase = styled.div`
   width: 100%;
   .wrapper {
@@ -46,9 +47,7 @@ const Thumbnail: FC<Props> = (props) => {
 
 const ImageThumbnail: FC<Props> = (props) => {
   return (
-    <div className="wrapper">
-      <img src={props.image}/>
-    </div>
+    <Image src={props.image}/>
   )
 }
 
