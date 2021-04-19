@@ -2,18 +2,21 @@
 import image1 from 'assets/images/mock/400x250.png'
 import image2 from 'assets/images/mock/800x250.png'
 import image3 from 'assets/images/mock/1100x550.png'
-// logo
-import tetris from 'assets/images/mock/tetris.png'
-import rhythmy from 'assets/images/mock/rhythmy.jpg'
-import linking from 'assets/images/mock/linking.jpg'
-import ene from 'assets/images/mock/ene.png'
-// 
-import a from 'assets/images/works/rhythmy/system_1.png'
-import b from 'assets/images/works/rhythmy/system_2.png'
-import c from 'assets/images/works/enechalle/concept_1.png'
-import d from 'assets/images/works/enechalle/system_1.png'
-import e from 'assets/images/works/enechalle/system_2.png'
-
+// rhythmy
+import rhythmy from 'assets/images/works/rhythmy/thumbnail.jpg'
+import rhythmy_system_1 from 'assets/images/works/rhythmy/system_1.png'
+import rhythmy_system_2 from 'assets/images/works/rhythmy/system_2.png'
+// conne
+import conne from 'assets/images/works/conne/thumbnail.jpg'
+import conne_rules_1 from 'assets/images/works/conne/rules_1.png'
+import conne_rules_2 from 'assets/images/works/conne/rules_2.png'
+// tetris
+import tetris from 'assets/images/works/tetris/thumbnail.png'
+// enechalle
+import enechalle from 'assets/images/works/enechalle/thumbnail.png'
+import enechalle_concept_1 from 'assets/images/works/enechalle/concept_1.png'
+import enechalle_system_1 from 'assets/images/works/enechalle/system_1.png'
+import enechalle_system_2 from 'assets/images/works/enechalle/system_2.png'
 
 const works: schema.Work[] = [
   {
@@ -30,6 +33,7 @@ const works: schema.Work[] = [
     urls: {
       repository: 'https://github.com/yamori-masato/rhythm',
     },
+    keywords: ['p5.js', 'Tone.js', 'Socket.IO', 'Express.js', 'webpack', 'GitHub Actions'],
     content: [
       {
         head: 'outline',
@@ -44,7 +48,7 @@ const works: schema.Work[] = [
       },
       {
         head: 'system',
-        images: [a, b],
+        images: [rhythmy_system_1, rhythmy_system_2],
         description: [
           `Express.jsでふたつのエンドポイントを用意しました。`,
           `①「/monitor」... メインモニター`,
@@ -79,6 +83,7 @@ const works: schema.Work[] = [
     role: ['solo'],
     skills: ['Python', 'Illustrator'],
     period: '2months',
+    keywords: ['pygame', 'Tkinter'],
     content: [
       {
         head: 'outline',
@@ -102,20 +107,36 @@ const works: schema.Work[] = [
   {
     id: 3,
     thumbnail: {
-      image: linking,
+      image: conne,
+      youtubeId: 'JVUP3XAy1iw',
     },
-    title: 'LinkingGame',
+    title: 'Conne!',
     genre: ['web', 'game'],
     role: ['frontend', 'backend'],
     skills: ['React', 'Rails'],
     period: '2months',
+    keywords: ['WebSocket', 'ActionCable', 'redis', 'ReactDnD', 'styled-components', 'Redux'],
+    urls: {
+      repository: 'https://github.com/yamori-masato/Conne',
+      site: 'https://conne-game.herokuapp.com/'
+    },
     content: [
       {
         head: 'outline',
         description: [
           `五目並べ風対戦ボードゲームです。五目並べとぷよぷよを掛け合わせた様なルールになっています。
-          サイトにアクセスするとランダムにマッチングして対戦が始まります。
-          `
+          サイトにアクセスするとランダムにマッチングして対戦が始まります。`,
+          `タブを2つ開いて是非遊んでみてください。`
+        ]
+      },
+      {
+        head: 'rules',
+        images: [conne_rules_1, conne_rules_2],
+        description: [
+          `手前の3種類のコマが自分、奥側が相手のコマとなります。
+          交互にひとつずつボードに設置していき特定の配置条件を満たした方が勝利となります。
+          常に、次の相手のターンに配置されるコマの候補が見えています。勝利を狙うのも大事ですが相手に勝たせないように考えながら配置するのが鍵となります。
+          `,
         ]
       },
       {
@@ -142,13 +163,17 @@ const works: schema.Work[] = [
   {
     id: 4,
     thumbnail: {
-      image: ene,
+      image: enechalle,
     },
     title: '#エナドリチャレンジ応援わんこ',
     genre: ['web'],
     role: ['backend'],
     skills: ['Ruby on Rails'],
     period: '3days',
+    urls: {
+      site: 'https://twitter.com/enechalleboy'
+    },
+    keywords: ['バッチ処理', 'Twitter Streaming API', 'TwitterBot', 'React', 'TypeScript', 'Firebase', 'Heroku'],
     content: [
       {
         head: 'outline',
@@ -159,7 +184,7 @@ const works: schema.Work[] = [
       },
       {
         head: 'concept',
-        images: [c],
+        images: [enechalle_concept_1],
         description: [
           `テーマは「Boost」でした。初日はアイデア出しをmiroを使って行いました。`,
           `チームでの共通点として`,
@@ -171,13 +196,24 @@ const works: schema.Work[] = [
       },
       {
         head: 'system',
-        images: [d, e],
+        images: [enechalle_system_1, enechalle_system_2],
         description: [
           `私はTwitterBotとフロントエンド向けのAPIを担当しました。具体的には以下の通りです。`,
           `　① 特定の条件を満たすツイートを定期的に取得し、ツイート時とその6時間後にリプライを送る`,
           `　② 現在チャレンジ中の人数とツイートを返すAPI`,
         ]
       },
+      {
+        head: 'impression',
+        description: [
+          `TwitterAPIを利用するのは初めてだったため、APIの仕様や制限にかなり苦しめられました。
+          バッチ処理でフェッチする間隔の調整だったりリトライ処理(TwitterAPIは指数関数的バックオフ)だったり初めて知ることが多くとても勉強になりました。
+          `,
+          `また、これまでバックエンドとフロントエンドの両方を学んできたことでチームに大きく貢献できたかと思います。
+          cors関係のエラーや外部API使用時のエラーに素早く対応でき、これまでの成長を感じられました。
+          `
+        ]
+      }
     ]
   },
 ]
