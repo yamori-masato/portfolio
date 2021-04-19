@@ -62,4 +62,5 @@ code {
   --ui-background: rgba(15, 15, 17, 0.7);
   --text-background: rgba(50, 50, 55, 0.7);
   --box-border-color: rgba(255,255,255,0.5);
+  --modal-background: rgb(55, 55, 57);
 }
