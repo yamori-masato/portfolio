@@ -42,6 +42,7 @@ const StyledMainContainer = styled.div`
 
 const StyledSideContainer = styled.aside`
   width: 280px;
+  z-index: 1;
 `
 
 type Props = RouteComponentProps<{id: string}> & { } 
