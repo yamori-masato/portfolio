@@ -13,7 +13,8 @@ declare namespace schema {
     urls?: {
       site?: string
       repository?: string
-    }
+    },
+    keywords: string[]
 
     content?: import('./lib/types').Section[]
   }
