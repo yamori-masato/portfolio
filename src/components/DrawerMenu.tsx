@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import Burger from './Burger'
 import NavList from './NavList'
