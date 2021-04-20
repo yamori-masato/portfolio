@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import Burger from './Burger'
 import NavList from './NavList'
+import { use100vh } from 'react-div-100vh'
 
-const StyledWrapper = styled.div<{isOpen: boolean}>`
+const StyledWrapper = styled.div<{isOpen: boolean, height: number | null}>`
   width: 100vw;
-  height: 100vh;
+  height: ${({height}) => (height ? height : 0)}px;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,11 +37,12 @@ const StyledTouch = styled.div`
 
 const DrawerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const height = use100vh()
   return (
     <div>
       <StyledWrapper
         isOpen={isOpen}
+        height={height}
       >
         <NavList
           isMobile={true}

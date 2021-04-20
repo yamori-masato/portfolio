@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import Header from './Header'
 import Background from './Background'
+import Div100vh from 'react-div-100vh'
 
 const StyledMain = styled.main`
-  height: 100vh;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -19,7 +19,9 @@ const Layout: FC = ({children}) => {
       <Header />
       <Background />
       <StyledMain id="scroll-container">
-        {children}
+        <Div100vh>
+          {children}
+        </Div100vh>
       </StyledMain>
     </div>
   )
