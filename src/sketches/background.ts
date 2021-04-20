@@ -8,7 +8,6 @@ export type SketchProps = {
 const sketch = (p: p5) => {
   let count: number
   let delay: number
-  let flag: boolean
   let z: ZodiacSign
 
   p.setup = () => {
@@ -38,7 +37,6 @@ const sketch = (p: p5) => {
 
   function initializeBackground() {
     z = new ZodiacSign(p, 0, 0, p.width, p.height)
-    flag = false
     count = 0
   }
 }
