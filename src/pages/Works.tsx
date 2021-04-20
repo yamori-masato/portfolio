@@ -1,7 +1,7 @@
 import React from 'react'
 import PageWrapper from './PageWrapper'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { sp } from 'media'
 import { headerHeight } from 'constants/styles'
 import UnderlinedText from 'components/UnderlinedText'
 import CardList from 'components/CardList'
