@@ -7,10 +7,10 @@ import AvatarContainer from './AvatarContainer'
 import Profile from './Profile'
 import { headerHeight } from 'constants/styles'
 
-const StyledSection = styled.section<{offset: number}>`
+const StyledSection = styled.section<{offset: number, height: number}>`
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: ${({height}) => height}px; 
   box-sizing: content-box;
   padding-top: ${({offset}) => offset}px;
 `
@@ -86,7 +86,7 @@ const Introduction = () => {
   // TODO: Elementをsectionタグにしたい
   return (
     <Element name="introduction">
-      <StyledSection offset={offset}>
+      <StyledSection offset={offset} height={vh}>
         <StyledContainer ref={contentRef}>
           <UnderlinedText as="h2">ABOUT ME</UnderlinedText>
           <StyledContent>
