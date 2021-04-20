@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { queryStrings } from 'constants/breakpoints'
 
 export const useMediaQuery = () => {
@@ -10,12 +10,6 @@ export const useMediaQuery = () => {
     ])
   ) as TMediaQueryList
 
-  const keyMap = {
-    sp: 'isSp',
-    tab: 'isTab',
-    pc: 'isPc'
-  } as const
-
   const [mq, setMq] = useState({
     isSp: mediaQueryList.sp.matches,
     isTab: mediaQueryList.tab.matches,
@@ -23,6 +17,12 @@ export const useMediaQuery = () => {
   })
 
   useEffect(() => {
+    const keyMap = {
+      sp: 'isSp',
+      tab: 'isTab',
+      pc: 'isPc'
+    } as const
+
     const keys = Object.keys(mediaQueryList) as (keyof TMediaQueryList)[]
     const listeners = keys.reduce((prev, cur) => {
       const listener = (e: MediaQueryListEvent) => {
@@ -42,7 +42,7 @@ export const useMediaQuery = () => {
         mediaQueryList[key].removeEventListener('change', listeners[key])
       })
     }
-  }, [])
+  }, [mediaQueryList])
 
   return mq  
 }
