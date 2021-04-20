@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { sp } from 'media'
 import UnderlinedText from './UnderlinedText'
 import ZoomImage from './ZoomImage'
 
