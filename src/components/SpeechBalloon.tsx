@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { ReactSVG } from 'react-svg'
 import Icon from './Icon'
 import detail from 'assets/images/detail.svg'
 
