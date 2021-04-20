@@ -19,7 +19,7 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw; // トップがElementなので
 `
 
 const StyledContent = styled.div`
@@ -41,9 +41,7 @@ const StyledContent = styled.div`
   }
 
   width: 80%;
-  ${pc`
-    max-width: 1000px;
-  `}
+  max-width: 1100px;
   padding: 55px 30px;
   margin-top: 50px;
   ${tab`
