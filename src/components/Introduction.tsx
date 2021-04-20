@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { sp, tab } from 'media'
 import { Element } from 'react-scroll'
 import UnderlinedText from './UnderlinedText'
 import AvatarContainer from './AvatarContainer'
