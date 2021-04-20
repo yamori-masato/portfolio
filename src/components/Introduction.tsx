@@ -71,7 +71,7 @@ const Introduction = () => {
           : 0
       ))
     }
-  }, [contentRef.current, vh])
+  }, [vh])
   useEffect(() => {
     const onResize = () => {
       const current = window.innerHeight
@@ -81,7 +81,7 @@ const Introduction = () => {
     return () => {
       window.removeEventListener('resize', onResize)
     }
-  }, [])
+  }, [vh])
 
   // TODO: Elementをsectionタグにしたい
   return (
