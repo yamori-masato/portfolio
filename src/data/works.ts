@@ -30,7 +30,7 @@ const works: schema.Work[] = [
     urls: {
       repository: 'https://github.com/yamori-masato/portfolio',
     },
-    keywords: ['TypeScript', 'p5.js', 'styled-components'],
+    keywords: ['TypeScript', 'p5.js', 'styled-components', 'Firebase'],
     content: [
       {
         head: 'outline',
