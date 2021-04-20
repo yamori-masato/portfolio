@@ -1,6 +1,4 @@
 import React, { FC } from 'react'
-import { snsData } from 'data/sns'
-import Icon from 'components/Icon'
 import { ReactSVG } from 'react-svg'
 import Link from './Link'
 import icon from 'assets/images/link.svg'
