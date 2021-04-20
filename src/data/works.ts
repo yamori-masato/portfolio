@@ -14,7 +14,7 @@ import enechalle_concept_1 from 'assets/images/works/enechalle/concept_1.png'
 import enechalle_system_1 from 'assets/images/works/enechalle/system_1.png'
 import enechalle_system_2 from 'assets/images/works/enechalle/system_2.png'
 // portfolio
-import portfolio from 'assets/images/works/portfolio/thumbnail.jpg'
+import portfolio from 'assets/images/works/portfolio/thumbnail.png'
 
 const works: schema.Work[] = [
   {
