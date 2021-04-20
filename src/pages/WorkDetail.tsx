@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import PageWrapper from './PageWrapper'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { pc, sp } from 'media'
 import useMediaQuery from 'hooks/useMediaQuery'
 import { headerHeight } from 'constants/styles'
 import works from 'data/works'
