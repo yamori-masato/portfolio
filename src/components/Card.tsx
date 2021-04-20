@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { pc, sp } from 'media'
 import { Link } from 'react-router-dom'
 import Image from './Image'
 
