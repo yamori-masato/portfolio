@@ -1,7 +1,3 @@
-// mock
-import image1 from 'assets/images/mock/400x250.png'
-import image2 from 'assets/images/mock/800x250.png'
-import image3 from 'assets/images/mock/1100x550.png'
 // rhythmy
 import rhythmy from 'assets/images/works/rhythmy/thumbnail.jpg'
 import rhythmy_system_1 from 'assets/images/works/rhythmy/system_1.png'
