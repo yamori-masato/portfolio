@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { pc, sp, tab } from 'media'
+import { sp, tab } from 'media'
 
 const StyledContainer = styled.div`
   display: flex;
