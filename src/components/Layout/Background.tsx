@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import P5Wrapper from 'react-p5-wrapper'
 import sketch from 'sketches/background'
@@ -11,10 +11,14 @@ const StyledWrapper = styled.div`
   overflow-x: hidden;
 `
 
-const Background = () => {
+type Props = {
+  count: number
+}
+
+const Background: FC<Props> = ({count}) => {
   return (
     <StyledWrapper>
-      <P5Wrapper sketch={sketch}/>
+      <P5Wrapper sketch={sketch} count={count}/>
     </StyledWrapper>
   )
 }

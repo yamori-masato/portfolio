@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styled from 'styled-components'
 import Header from './Header'
 import Background from './Background'
@@ -13,11 +13,13 @@ const StyledMain = styled.main`
   }
 `
 
-const Layout: FC = ({children}) => {
+const Layout: FC = ({ children }) => {
+  const [count, setCount] = useState<number>(0)
+  const onLogoClick = () => { setCount(prev => prev+1) }
   return (
     <div>
-      <Header />
-      <Background />
+      <Header onLogoClick={onLogoClick}/>
+      <Background count={count}/>
       <StyledMain id="scroll-container">
         <Div100vh>
           {children}

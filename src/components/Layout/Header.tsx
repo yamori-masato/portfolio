@@ -24,15 +24,21 @@ const StyledLogo = styled.div`
   font-weight: bold;
 `
 
-const Header: FC = () => {
+type Props = {
+  onLogoClick: () => void
+}
+
+const Header: FC<Props> = ({onLogoClick}) => {
   const history = useHistory()
   return (
     <StyledHeader>
       <StyledLogo
         className="cursor"
         onClick={() => {
-          history.push('/')
-          // TODO: ここでp5にpropsを渡して再描画させる
+          if (history.location.pathname !== '/') {
+            history.push('/')
+          }
+          onLogoClick()
         }}
       >
         Portfolio
