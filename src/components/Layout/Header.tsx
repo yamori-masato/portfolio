@@ -35,7 +35,9 @@ const Header: FC<Props> = ({onLogoClick}) => {
       <StyledLogo
         className="cursor"
         onClick={() => {
-          history.push('/')
+          if (history.location.pathname !== '/') {
+            history.push('/')
+          }
           onLogoClick()
         }}
       >
