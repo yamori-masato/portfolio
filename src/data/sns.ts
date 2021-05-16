@@ -6,7 +6,7 @@ import zenn from 'assets/images/logo/zenn.svg'
 export const snsData: schema.Sns[] = [
   {
     name: "github",
-    link: "https://github.com/yamori-masato",
+    link: "https://github.com/yamosan",
     svg: {
       url: github,
       style: {
