@@ -29,7 +29,7 @@ export const snsData: schema.Sns[] = [
   },
   {
     name: "qiita",
-    link: "https://qiita.com/yamooo",
+    link: "https://qiita.com/yamo",
     svg: {
       url: qiita,
       style: {
