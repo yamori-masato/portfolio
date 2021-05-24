@@ -22,8 +22,8 @@ const StyledContainer = styled.div`
   margin: 0 auto;
 
   padding-top: calc(${HEADER_HEIGHT}px + 20px);
-  ${sp`
-    padding-top: calc(${HEADER_HEIGHT}px + 20px);
+  ${pc`
+    padding-top: calc(${HEADER_HEIGHT}px + 40px);
   `}
 `
 
