@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { headerHeight } from 'constants/styles'
+import { HEADER_HEIGHT } from 'constants/styles'
 import ViewSourceLink from './ViewSourceLink'
 import VisitWebsite from './VisitWebsite'
 import SpeechBalloon from './SpeechBalloon'
 
 const StyledContainer = styled.div`
   position: sticky;
-  top: ${headerHeight}px;
+  top: ${HEADER_HEIGHT}px;
 `
 
 const StyledOverview = styled.div`

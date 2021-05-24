@@ -3,7 +3,7 @@ import PageWrapper from './PageWrapper'
 import styled from 'styled-components'
 import { pc, sp } from 'media'
 import useMediaQuery from 'hooks/useMediaQuery'
-import { headerHeight } from 'constants/styles'
+import { HEADER_HEIGHT } from 'constants/styles'
 import works from 'data/works'
 import { RouteComponentProps } from 'react-router-dom'
 import Thumbnail from 'components/Thumbnail'
@@ -21,9 +21,9 @@ const StyledContainer = styled.div`
   min-height: 100%;
   margin: 0 auto;
 
-  padding-top: calc(${headerHeight}px + 20px);
+  padding-top: calc(${HEADER_HEIGHT}px + 20px);
   ${sp`
-    padding-top: calc(${headerHeight}px + 20px);
+    padding-top: calc(${HEADER_HEIGHT}px + 20px);
   `}
 `
 

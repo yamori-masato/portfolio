@@ -2,16 +2,16 @@ import React from 'react'
 import PageWrapper from './PageWrapper'
 import styled from 'styled-components'
 import { sp } from 'media'
-import { headerHeight } from 'constants/styles'
+import { HEADER_HEIGHT } from 'constants/styles'
 import UnderlinedText from 'components/UnderlinedText'
 import CardList from 'components/CardList'
 
 const StyledContainer = styled.div`
   min-height: 100%;
   margin: 0 auto;
-  padding-top: calc(${headerHeight}px + 100px);
+  padding-top: calc(${HEADER_HEIGHT}px + 100px);
   ${sp`
-    padding-top: calc(${headerHeight}px + 20px);
+    padding-top: calc(${HEADER_HEIGHT}px + 20px);
   `}
   display: flex;
   align-items: center;

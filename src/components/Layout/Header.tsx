@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import GlobalNav from './GlobalNav'
-import { headerHeight } from 'constants/styles'
+import { HEADER_HEIGHT } from 'constants/styles'
 import { useHistory } from 'react-router-dom'
 
 const StyledHeader = styled.div`
@@ -16,7 +16,7 @@ const StyledHeader = styled.div`
   user-select: none;
 
   padding: 0 2.2rem;
-  height: ${headerHeight}px;
+  height: ${HEADER_HEIGHT}px;
 `
 
 const StyledLogo = styled.div`
