@@ -7,17 +7,30 @@ import ZoomImage from './ZoomImage'
 const StyledContainer = styled.div`
   width: 100%;
   margin: 0 auto;
+  margin-top: 7.2rem;
+  ${sp`
+    margin-top: 4.0rem;
+  `}
 `
 
 const StyledSection = styled.section`
   width: 100%;
-  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  margin-bottom: 9.4rem;
+  ${sp`
+    margin-bottom: 6.0rem;
+  `}
   & > * {
-    margin-bottom: 2.6vh;
+    margin-bottom: 2.4rem;
+    ${sp`
+      margin-bottom: 2.0rem;
+    `}
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `
 
