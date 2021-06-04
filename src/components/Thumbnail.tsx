@@ -47,7 +47,7 @@ const Thumbnail: FC<Props> = (props) => {
 
 const ImageThumbnail: FC<Props> = (props) => {
   return (
-    <Image src={props.image}/>
+    <Image src={props.image} alt="thumbnail"/>
   )
 }
 
