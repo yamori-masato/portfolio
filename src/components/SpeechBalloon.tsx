@@ -94,7 +94,7 @@ type Props = {
 
 const SpeechBalloon: FC<Props> = ({ keywords }) => {
   return (
-    <StyledContainer>
+    <StyledContainer aria-label="open tooltip" aria-describedby="tooltip">
       <StyledTip>
         <Icon
           svg={detail}
@@ -109,7 +109,7 @@ const SpeechBalloon: FC<Props> = ({ keywords }) => {
 
 const MiniModal: FC<Props> = ({ keywords }) => {
   return keywords.length !== 0 ? (
-    <StyledModal>
+    <StyledModal id="tooltip">
       <StyledModalTitle>Keywords</StyledModalTitle>
       <StyledTagContainer>
         {
