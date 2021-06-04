@@ -3,11 +3,20 @@ import styled from 'styled-components'
 import Icon from './Icon'
 import detail from 'assets/images/detail.svg'
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.button`
+  appearance: none;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  
+  padding-bottom: 1px;
+
   position: relative;
   width: max-content;
   margin: 0;
-  &:hover > :last-child {
+  &:hover > :last-child,
+  &:focus > :last-child {
     opacity: 1;
     visibility: visible;
   }
@@ -55,6 +64,7 @@ const StyledModalTitle = styled.p`
   padding-bottom: 5px;
   border-bottom: solid 1px gray;
   font-size: 1.8rem;
+  color: #fff;
 `
 
 const StyledTagContainer = styled.div`
@@ -84,7 +94,7 @@ type Props = {
 
 const SpeechBalloon: FC<Props> = ({ keywords }) => {
   return (
-    <StyledContainer>
+    <StyledContainer aria-label="open tooltip" aria-describedby="tooltip">
       <StyledTip>
         <Icon
           svg={detail}
@@ -99,7 +109,7 @@ const SpeechBalloon: FC<Props> = ({ keywords }) => {
 
 const MiniModal: FC<Props> = ({ keywords }) => {
   return keywords.length !== 0 ? (
-    <StyledModal>
+    <StyledModal id="tooltip">
       <StyledModalTitle>Keywords</StyledModalTitle>
       <StyledTagContainer>
         {

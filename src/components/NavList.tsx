@@ -5,7 +5,7 @@ import { tab } from 'media'
 import UnderlinedText from './UnderlinedText'
 
 // TODO: 汎用化
-const StyledUl = styled.nav<{isMobile: boolean}>`
+const StyledUl = styled.ul<{isMobile: boolean}>`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -71,19 +71,21 @@ const NavList: FC<Props> = ({ isMobile, onLinkClick }) => {
   ]
 
   return (
-    <StyledUl isMobile={isMobile}>
-      {paths.map((v, i) => (
-        <li key={i.toString()}>
-          <Link
-            to={v.path}
-            className="cursor"
-            onClick={onLinkClick}
-          >
-            <StyledText isMobile={isMobile}>{v.text}</StyledText>
-          </Link>
-        </li>
-      ))}
-    </StyledUl>
+    <nav>
+      <StyledUl isMobile={isMobile}>
+        {paths.map((v, i) => (
+          <li key={i.toString()}>
+            <Link
+              to={v.path}
+              className="cursor"
+              onClick={onLinkClick}
+            >
+              <StyledText isMobile={isMobile}>{v.text}</StyledText>
+            </Link>
+          </li>
+        ))}
+      </StyledUl>
+    </nav>
   )
 }
 
