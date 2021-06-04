@@ -29,16 +29,13 @@ const StyledOverview = styled.div`
         margin-bottom: 0;
       }
 
-      & > div {
+      & > * {
         margin-left: 0.5em;
         font-size: 1.8rem;
         &:first-child {
           margin-left: 0;
           font-size: 2.0rem;
           font-weight: bold;
-        }
-        &:nth-child(3) {
-          padding-bottom: 1px;
         }
       }
     }
