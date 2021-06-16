@@ -47,7 +47,7 @@ const FirstView = () => {
   return (
     <StyledSection height={height}>
       <h1>YAMORI MASATO</h1>
-      <ScrollNav text="about me!"/>
+      <ScrollNav text="ABOUT ME!"/>
     </StyledSection>
   )
 }
