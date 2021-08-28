@@ -1,6 +1,7 @@
 import p5 from "p5";
+import P5Component from "sketches/types/P5Component";
 
-class Snake {
+class Snake implements P5Component {
   readonly position: p5.Vector;
   private vertices: p5.Vector[];
   private fadeTime: number;
