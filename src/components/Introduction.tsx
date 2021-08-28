@@ -1,26 +1,26 @@
-import React, { useRef, useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { sp, tab } from 'media'
-import { Element } from 'react-scroll'
-import UnderlinedText from './UnderlinedText'
-import AvatarContainer from './AvatarContainer'
-import Profile from './Profile'
-import { HEADER_HEIGHT } from 'constants/styles'
+import React, { useRef, useEffect, useState } from "react";
+import styled from "styled-components";
+import { sp, tab } from "media";
+import { Element } from "react-scroll";
+import UnderlinedText from "./UnderlinedText";
+import AvatarContainer from "./AvatarContainer";
+import Profile from "./Profile";
+import { HEADER_HEIGHT } from "constants/styles";
 
-const StyledSection = styled.section<{offset: number, height: number}>`
+const StyledSection = styled.section<{ offset: number; height: number }>`
   display: flex;
   align-items: center;
-  min-height: ${({height}) => height}px; 
+  min-height: ${({ height }) => height}px;
   box-sizing: content-box;
-  padding-top: ${({offset}) => offset}px;
-`
+  padding-top: ${({ offset }) => offset}px;
+`;
 
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw; // トップがElementなので
-`
+`;
 
 const StyledContent = styled.div`
   background-color: var(--ui-background);
@@ -37,7 +37,7 @@ const StyledContent = styled.div`
     `}
   }
   & > div:last-child {
-    flex: 7
+    flex: 7;
   }
 
   width: 80%;
@@ -51,35 +51,31 @@ const StyledContent = styled.div`
     width: 90%;
     flex-direction: column;
     margin-top: 30px;
-  `} 
-`
+  `}
+`;
 
 const Introduction = () => {
-  const [offset, setOffset] = useState<number>(0)
-  const [vh, setVh] = useState<number>(window.innerHeight)
-  const contentRef = useRef<HTMLDivElement | null>(null)
+  const [offset, setOffset] = useState<number>(0);
+  const [vh, setVh] = useState<number>(window.innerHeight);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (contentRef.current) {
-      const contentHeight = contentRef.current.clientHeight
-      const top = (vh - contentHeight) / 2
-      const newOffset = top > 0 ? HEADER_HEIGHT - top : HEADER_HEIGHT
-      setOffset(() => (
-        newOffset > 0
-          ? newOffset
-          : 0
-      ))
+      const contentHeight = contentRef.current.clientHeight;
+      const top = (vh - contentHeight) / 2;
+      const newOffset = top > 0 ? HEADER_HEIGHT - top : HEADER_HEIGHT;
+      setOffset(() => (newOffset > 0 ? newOffset : 0));
     }
-  }, [vh])
+  }, [vh]);
   useEffect(() => {
     const onResize = () => {
-      const current = window.innerHeight
-      if (current !== vh) setVh(current)
-    } // TODO: innerHeightが正しいか検証
-    window.addEventListener('resize', onResize)
+      const current = window.innerHeight;
+      if (current !== vh) setVh(current);
+    }; // TODO: innerHeightが正しいか検証
+    window.addEventListener("resize", onResize);
     return () => {
-      window.removeEventListener('resize', onResize)
-    }
-  }, [vh])
+      window.removeEventListener("resize", onResize);
+    };
+  }, [vh]);
 
   // TODO: Elementをsectionタグにしたい
   return (
@@ -94,7 +90,7 @@ const Introduction = () => {
         </StyledContainer>
       </StyledSection>
     </Element>
-  )
-}
+  );
+};
 
-export default Introduction
+export default Introduction;

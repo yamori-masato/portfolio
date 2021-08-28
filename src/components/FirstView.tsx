@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import ScrollNav from './ScrollNav'
-import { sp, tab } from 'media'
-import { use100vh } from 'react-div-100vh'
+import React from "react";
+import styled from "styled-components";
+import ScrollNav from "./ScrollNav";
+import { sp, tab } from "media";
+import { use100vh } from "react-div-100vh";
 
-const StyledSection = styled.section<{height: number | null}>`
+const StyledSection = styled.section<{ height: number | null }>`
   position: relative;
-  height: ${({height}) => height ? height : 0}px;
+  height: ${({ height }) => (height ? height : 0)}px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,16 +40,16 @@ const StyledSection = styled.section<{height: number | null}>`
     left: 50%;
     transform: translateX(-50%);
   }
-`
+`;
 
 const FirstView = () => {
-  const height = use100vh()
+  const height = use100vh();
   return (
     <StyledSection height={height}>
       <h1>YAMORI MASATO</h1>
-      <ScrollNav text="ABOUT ME!"/>
+      <ScrollNav text="ABOUT ME!" />
     </StyledSection>
-  )
-}
+  );
+};
 
-export default FirstView
+export default FirstView;

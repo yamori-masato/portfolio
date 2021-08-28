@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import YouTube from 'react-youtube'
-import Image from './Image'
+import React, { FC } from "react";
+import styled from "styled-components";
+import YouTube from "react-youtube";
+import Image from "./Image";
 
 // TODO: YoutubeでもImageを使いたい
 const StyledBase = styled.div`
@@ -22,44 +22,35 @@ const StyledBase = styled.div`
       border: none;
     }
   }
-`
+`;
 
 type Props = {
-  image: string
-  video?: string
-}
+  image: string;
+  video?: string;
+};
 
 const Thumbnail: FC<Props> = (props) => {
   return (
     <StyledBase>
-      {
-        props.video ? (
-          <VideoThumbnail {...props} />
-        ) : (
-          <ImageThumbnail {...props} />
-        )
-      }
+      {props.video ? (
+        <VideoThumbnail {...props} />
+      ) : (
+        <ImageThumbnail {...props} />
+      )}
     </StyledBase>
-  )
-}
+  );
+};
 
 // ----------
 
 const ImageThumbnail: FC<Props> = (props) => {
-  return (
-    <Image src={props.image} alt="thumbnail"/>
-  )
-}
+  return <Image src={props.image} alt="thumbnail" />;
+};
 
 // ----------
 
 const VideoThumbnail: FC<Props> = (props) => {
-  return (
-    <YouTube
-      videoId={props.video}
-      containerClassName="wrapper"
-    />
-  )
-}
+  return <YouTube videoId={props.video} containerClassName="wrapper" />;
+};
 
-export default Thumbnail
+export default Thumbnail;

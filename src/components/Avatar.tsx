@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { sp } from 'media'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { sp } from "media";
 
 const StyledContainer = styled.div`
   width: 200px;
@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
     font-size: 1.6rem;
     margin-bottom: 0;
   }
-`
+`;
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
   padding-bottom: 100%;
   border-radius: 50%;
   overflow: hidden;
-`
+`;
 
 const StyledImg = styled.img`
   position: absolute;
@@ -36,14 +36,14 @@ const StyledImg = styled.img`
   background-color: gray;
   object-fit: cover;
   transform: scale(1.1);
-`
+`;
 
 type Props = {
-  src: string,
-  name: string
-}
+  src: string;
+  name: string;
+};
 
-const Avatar: FC<Props> = ({src, name}) => {
+const Avatar: FC<Props> = ({ src, name }) => {
   return (
     <StyledContainer>
       <StyledWrapper>
@@ -51,7 +51,7 @@ const Avatar: FC<Props> = ({src, name}) => {
       </StyledWrapper>
       <p>{name}</p>
     </StyledContainer>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;

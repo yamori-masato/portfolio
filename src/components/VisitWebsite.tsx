@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
-import { ReactSVG } from 'react-svg'
-import Link from './Link'
-import icon from 'assets/images/link.svg'
+import React, { FC } from "react";
+import { ReactSVG } from "react-svg";
+import Link from "./Link";
+import icon from "assets/images/link.svg";
 
 type Props = {
-  url: string
-}
+  url: string;
+};
 
 // TODO: snsDataに依存しないようにしたい
 const VisitWebsite: FC<Props> = ({ url }) => {
@@ -18,11 +18,11 @@ const VisitWebsite: FC<Props> = ({ url }) => {
     >
       <ReactSVG
         src={icon}
-        style={{display: 'flex', alignItems: 'center', height: '10px'}}
+        style={{ display: "flex", alignItems: "center", height: "10px" }}
       />
       <div>Visit website</div>
     </Link>
-  )
-}
+  );
+};
 
-export default VisitWebsite
+export default VisitWebsite;

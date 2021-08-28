@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
+import React, { FC } from "react";
+import styled from "styled-components";
 
 const StyledLink = styled.a`
   display: flex;
@@ -23,16 +23,12 @@ const StyledLink = styled.a`
       margin-right: 0;
     }
   }
-`
+`;
 
-type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & { }
+type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {};
 
 const Link: FC<Props> = (props) => {
-  return (
-    <StyledLink {...props}>
-      {props.children}
-    </StyledLink>
-  )
-}
+  return <StyledLink {...props}>{props.children}</StyledLink>;
+};
 
-export default Link
+export default Link;

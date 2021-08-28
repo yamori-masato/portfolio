@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { sp } from 'media'
-import UnderlinedText from './UnderlinedText'
-import ZoomImage from './ZoomImage'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { sp } from "media";
+import UnderlinedText from "./UnderlinedText";
+import ZoomImage from "./ZoomImage";
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   ${sp`
     margin-top: 4.0rem;
   `}
-`
+`;
 
 const StyledSection = styled.section`
   width: 100%;
@@ -32,7 +32,7 @@ const StyledSection = styled.section`
       margin-bottom: 0;
     }
   }
-`
+`;
 
 const StyledImgContainer = styled.div`
   width: 100%;
@@ -43,7 +43,7 @@ const StyledImgContainer = styled.div`
   ${sp`
     grid-template-columns: repeat(1, 1fr);
   `}
-`
+`;
 
 const StyledDescription = styled.div`
   width: 100%;
@@ -66,9 +66,9 @@ const StyledDescription = styled.div`
       font-size: 1.4rem;
     `}
   }
-`
+`;
 
-type Props = Pick<schema.Work, 'content'>
+type Props = Pick<schema.Work, "content">;
 
 const WorkContent: FC<Props> = ({ content }) => {
   return content ? (
@@ -78,24 +78,28 @@ const WorkContent: FC<Props> = ({ content }) => {
           <UnderlinedText as="h2">{v.head}</UnderlinedText>
           <Images images={v.images} />
           <StyledDescription>
-            {v.description.map((v, i) => <p key={i.toString()}>{v}</p>)}
+            {v.description.map((v, i) => (
+              <p key={i.toString()}>{v}</p>
+            ))}
           </StyledDescription>
         </StyledSection>
       ))}
     </StyledContainer>
-  ) : (<></>)
-}
+  ) : (
+    <></>
+  );
+};
 
-const Images: FC<{images?: string[]}> = ({images}) => {
-  if (!images) return <></>
-  if (!images.length) return <></>
+const Images: FC<{ images?: string[] }> = ({ images }) => {
+  if (!images) return <></>;
+  if (!images.length) return <></>;
   return (
     <StyledImgContainer>
       {images.map((v, i) => (
         <ZoomImage src={v} key={i.toString()} />
       ))}
     </StyledImgContainer>
-  )
-}
+  );
+};
 
-export default WorkContent
+export default WorkContent;

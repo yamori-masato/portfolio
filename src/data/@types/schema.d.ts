@@ -1,35 +1,35 @@
 declare namespace schema {
   type Work = {
-    id: number
+    id: number;
     thumbnail: {
-      image: string
-      youtubeId?: string
-    }
-    title: string
-    genre: import('./lib/types').Genre[]
-    role: string[]
-    skills: string[]
-    period: string
+      image: string;
+      youtubeId?: string;
+    };
+    title: string;
+    genre: import("./lib/types").Genre[];
+    role: string[];
+    skills: string[];
+    period: string;
     urls?: {
-      site?: string
-      repository?: string
-    },
-    keywords: string[]
+      site?: string;
+      repository?: string;
+    };
+    keywords: string[];
 
-    content?: import('./lib/types').Section[]
-  }
+    content?: import("./lib/types").Section[];
+  };
 
   // TODO: styleにちゃんと型をつけたい
   type Sns = {
-    name: string
-    link: string
+    name: string;
+    link: string;
     svg: {
-      url: string
+      url: string;
       style?: {
-        fill: string
-        background: string
-        transform?: string
-      }
-    },
-  }
+        fill: string;
+        background: string;
+        transform?: string;
+      };
+    };
+  };
 }

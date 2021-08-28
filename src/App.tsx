@@ -1,18 +1,13 @@
-import React from 'react'
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
-} from 'react-router-dom'
-import {
-  Top,
-  Works,
-  WorkDetail,
-  Contact,
-} from 'pages'
-import Layout from 'components/Layout'
-import ScrollToTop from './ScrollToTop'
+} from "react-router-dom";
+import { Top, Works, WorkDetail, Contact } from "pages";
+import Layout from "components/Layout";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   return (
@@ -28,7 +23,7 @@ const App = () => {
         </Switch>
       </Layout>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

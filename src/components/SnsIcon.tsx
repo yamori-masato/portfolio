@@ -1,27 +1,27 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import Icon from './Icon'
+import React, { FC } from "react";
+import styled from "styled-components";
+import Icon from "./Icon";
 
-const StyledLink = styled.a<{background?: string | number}>`
+const StyledLink = styled.a<{ background?: string | number }>`
   display: block;
   border-radius: 50%;
   border: solid 2px #434343;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0.9;
-  
+
   &:hover {
     border: solid 2px #7d7d7d;
   }
-`
+`;
 
 export type TSns = {
-  name: string
-  link: string
+  name: string;
+  link: string;
   svg: {
-    url: string
-    style?: React.CSSProperties
-  }
-}
+    url: string;
+    style?: React.CSSProperties;
+  };
+};
 
 const SnsIcon: FC<TSns> = ({ name, link, svg }) => {
   return (
@@ -39,7 +39,7 @@ const SnsIcon: FC<TSns> = ({ name, link, svg }) => {
         background={svg.style?.background}
       />
     </StyledLink>
-  )
-}
+  );
+};
 
-export default SnsIcon
+export default SnsIcon;

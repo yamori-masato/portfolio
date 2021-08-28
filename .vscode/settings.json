@@ -1,6 +1,13 @@
 {
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "css.lint.unknownAtRules": "ignore",
-  "cSpell.words": [
-    "scroller"
-  ]
+  "cSpell.words": ["scroller"]
 }

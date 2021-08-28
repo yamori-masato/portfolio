@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import Icon from './Icon'
-import detail from 'assets/images/detail.svg'
+import React, { FC } from "react";
+import styled from "styled-components";
+import Icon from "./Icon";
+import detail from "assets/images/detail.svg";
 
 const StyledContainer = styled.button`
   appearance: none;
@@ -9,7 +9,7 @@ const StyledContainer = styled.button`
   padding: 0;
   background-color: transparent;
   border: none;
-  
+
   padding-bottom: 1px;
 
   position: relative;
@@ -20,12 +20,12 @@ const StyledContainer = styled.button`
     opacity: 1;
     visibility: visible;
   }
-`
+`;
 
 const StyledTip = styled.div`
   width: 18px;
   height: 18px;
-`
+`;
 
 const StyledModal = styled.div`
   position: absolute;
@@ -49,12 +49,12 @@ const StyledModal = styled.div`
     left: 50%;
     margin-left: -7px;
     border: 6px solid transparent;
-	  border-bottom: 7px solid var(--modal-background);
+    border-bottom: 7px solid var(--modal-background);
   }
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 
 const StyledModalTitle = styled.p`
   width: 80%;
@@ -65,7 +65,7 @@ const StyledModalTitle = styled.p`
   border-bottom: solid 1px gray;
   font-size: 1.8rem;
   color: #fff;
-`
+`;
 
 const StyledTagContainer = styled.div`
   display: flex;
@@ -73,7 +73,7 @@ const StyledTagContainer = styled.div`
   white-space: nowrap;
   font-size: 1.2rem;
   color: black;
-`
+`;
 
 const StyledTag = styled.div`
   display: inline-block;
@@ -86,40 +86,36 @@ const StyledTag = styled.div`
   border: 1px solid #bebebe;
   border-radius: 2em;
   font-size: 1.3rem;
-`
+`;
 
 type Props = {
-  keywords: string[]
-}
+  keywords: string[];
+};
 
 const SpeechBalloon: FC<Props> = ({ keywords }) => {
   return (
     <StyledContainer aria-label="open tooltip" aria-describedby="tooltip">
       <StyledTip>
-        <Icon
-          svg={detail}
-          size={18}
-          background={"transparent"}
-        />
+        <Icon svg={detail} size={18} background={"transparent"} />
       </StyledTip>
-      <MiniModal keywords={keywords}/>
+      <MiniModal keywords={keywords} />
     </StyledContainer>
-  )
-}
+  );
+};
 
 const MiniModal: FC<Props> = ({ keywords }) => {
   return keywords.length !== 0 ? (
     <StyledModal id="tooltip">
       <StyledModalTitle>Keywords</StyledModalTitle>
       <StyledTagContainer>
-        {
-          keywords.map((v, i) => (
-            <StyledTag key={i.toString()}>{v}</StyledTag>
-          ))
-        }
+        {keywords.map((v, i) => (
+          <StyledTag key={i.toString()}>{v}</StyledTag>
+        ))}
       </StyledTagContainer>
     </StyledModal>
-  ) : (<></>)
-}
+  ) : (
+    <></>
+  );
+};
 
-export default SpeechBalloon
+export default SpeechBalloon;

@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { sp, tab } from 'media'
-import Card from './Card'
-import works from 'data/works'
+import React from "react";
+import styled from "styled-components";
+import { sp, tab } from "media";
+import Card from "./Card";
+import works from "data/works";
 
 const StyledGrid = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-	grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   max-width: 1000px;
 
   width: 80%;
@@ -26,7 +26,7 @@ const StyledGrid = styled.ul`
     grid-column-gap: 0px;
     grid-row-gap: 15px;
   `}
-`
+`;
 
 const CardList = () => {
   return (
@@ -42,7 +42,7 @@ const CardList = () => {
         </li>
       ))}
     </StyledGrid>
-  )
-}
+  );
+};
 
-export default CardList
+export default CardList;

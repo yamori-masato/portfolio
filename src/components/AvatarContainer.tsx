@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import Avatar from './Avatar'
-import SnsIconList from './SnsIconList'
-import { snsData } from 'data/sns'
-import headShot from 'assets/images/headShot.jpg'
+import React from "react";
+import styled from "styled-components";
+import Avatar from "./Avatar";
+import SnsIconList from "./SnsIconList";
+import { snsData } from "data/sns";
+import headShot from "assets/images/headShot.jpg";
 
 const StyledAvatarContainer = styled.div`
   display: flex;
@@ -14,19 +14,16 @@ const StyledAvatarContainer = styled.div`
   & > *:last-child {
     /* margin-top: 1.2rem; */
   }
-`
+`;
 
 const AvatarContainer = () => {
-  const name = "Yamori Masato"
+  const name = "Yamori Masato";
   return (
     <StyledAvatarContainer>
-      <Avatar
-        src={headShot}
-        name={name}
-      />
-      <SnsIconList data={snsData}/>
+      <Avatar src={headShot} name={name} />
+      <SnsIconList data={snsData} />
     </StyledAvatarContainer>
-  )
-}
+  );
+};
 
-export default AvatarContainer
+export default AvatarContainer;

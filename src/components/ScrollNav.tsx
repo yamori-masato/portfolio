@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-scroll'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -9,13 +9,13 @@ const StyledContainer = styled.div`
   height: 50px;
   padding: 10px 20px;
   cursor: pointer;
-`
+`;
 
 const StyledText = styled.span`
   color: #fff;
   font-size: 1.4rem;
   letter-spacing: 0.2rem;
-`
+`;
 
 const StyledTriangle = styled.div`
   @keyframes down {
@@ -37,7 +37,7 @@ const StyledTriangle = styled.div`
   position: relative;
   padding: 10px;
   ::before {
-    content: '';
+    content: "";
     width: 14px;
     height: 14px;
     border-top: solid 2px yellow;
@@ -48,13 +48,13 @@ const StyledTriangle = styled.div`
     transform-origin: center center;
     animation: down 3s infinite;
   }
-`
+`;
 
 type Props = {
-  text: string
-}
+  text: string;
+};
 
-const ScrollNav: FC<Props> = ({text}) => {
+const ScrollNav: FC<Props> = ({ text }) => {
   return (
     <Link
       to="introduction"
@@ -64,10 +64,10 @@ const ScrollNav: FC<Props> = ({text}) => {
     >
       <StyledContainer className="cursor">
         <StyledText>{text}</StyledText>
-        <StyledTriangle/>
+        <StyledTriangle />
       </StyledContainer>
     </Link>
-  )
-}
+  );
+};
 
-export default ScrollNav
+export default ScrollNav;

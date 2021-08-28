@@ -1,7 +1,7 @@
-import qiita from 'assets/images/logo/qiita.svg'
-import twitter from 'assets/images/logo/twitter.svg'
-import github from 'assets/images/logo/github.svg'
-import zenn from 'assets/images/logo/zenn.svg'
+import qiita from "assets/images/logo/qiita.svg";
+import twitter from "assets/images/logo/twitter.svg";
+import github from "assets/images/logo/github.svg";
+import zenn from "assets/images/logo/zenn.svg";
 
 export const snsData: schema.Sns[] = [
   {
@@ -11,8 +11,8 @@ export const snsData: schema.Sns[] = [
       url: github,
       style: {
         fill: "#fff",
-        background: "#181717"
-      }
+        background: "#181717",
+      },
     },
   },
   {
@@ -23,8 +23,8 @@ export const snsData: schema.Sns[] = [
       style: {
         fill: "#3EA8FF",
         background: "#323030",
-        transform: "scale(0.75)"
-      }
+        transform: "scale(0.75)",
+      },
     },
   },
   {
@@ -35,8 +35,8 @@ export const snsData: schema.Sns[] = [
       style: {
         fill: "#fff",
         background: "#55c500",
-        transform: "scale(0.85)"
-      }
+        transform: "scale(0.85)",
+      },
     },
   },
   {
@@ -47,8 +47,8 @@ export const snsData: schema.Sns[] = [
       style: {
         fill: "#fff",
         background: "#1DA1F2",
-        transform: "scale(0.65)"
-      }
+        transform: "scale(0.65)",
+      },
     },
   },
-]
+];

@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import styled, { css } from 'styled-components'
+import React, { FC } from "react";
+import styled, { css } from "styled-components";
 
-const StyledContainer = styled.div<{isOpen: boolean}>`
+const StyledContainer = styled.div<{ isOpen: boolean }>`
   position: relative;
   width: 30px;
   height: 20px;
@@ -27,36 +27,35 @@ const StyledContainer = styled.div<{isOpen: boolean}>`
       bottom: 0;
     }
 
-    ${({isOpen}) => isOpen && css`
-      &:nth-child(1) {
-        transform: translateY(calc(10px - 50%)) rotate(45deg) scale(0.9);
-      }
-      &:nth-child(2) {
-        display: none;
-      }
-      &:nth-child(3) {
-        transform: translateY(calc(-10px + 50%)) rotate(-45deg) scale(0.9);
-      }
-    `}
+    ${({ isOpen }) =>
+      isOpen &&
+      css`
+        &:nth-child(1) {
+          transform: translateY(calc(10px - 50%)) rotate(45deg) scale(0.9);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: translateY(calc(-10px + 50%)) rotate(-45deg) scale(0.9);
+        }
+      `}
   }
-`
+`;
 
 type Props = {
-  onClick: () => void
-  isOpen: boolean
-}
+  onClick: () => void;
+  isOpen: boolean;
+};
 
 const Burger: FC<Props> = (props) => {
   return (
-    <StyledContainer
-      onClick={props.onClick}
-      isOpen={props.isOpen}
-    >
+    <StyledContainer onClick={props.onClick} isOpen={props.isOpen}>
       <span></span>
       <span></span>
       <span></span>
     </StyledContainer>
-  )
-}
+  );
+};
 
-export default Burger
+export default Burger;
