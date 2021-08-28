@@ -15,6 +15,8 @@ import enechalle_system_1 from 'assets/images/works/enechalle/system_1.png'
 import enechalle_system_2 from 'assets/images/works/enechalle/system_2.png'
 // portfolio
 import portfolio from 'assets/images/works/portfolio/thumbnail.png'
+// helium
+import helium from 'assets/images/works/helium/thumbnail.png'
 
 const works: schema.Work[] = [
   {
@@ -123,55 +125,43 @@ const works: schema.Work[] = [
   {
     id: 3,
     thumbnail: {
-      image: conne,
-      youtubeId: 'JVUP3XAy1iw',
+      image: helium,
     },
-    title: 'Conne!',
-    genre: ['web', 'game'],
-    role: ['frontend', 'backend'],
-    skills: ['React', 'Rails'],
-    period: '2months',
-    keywords: ['WebSocket', 'ActionCable', 'redis', 'ReactDnD', 'styled-components', 'Redux'],
+    title: 'HELIUM',
+    genre: ['web'],
+    role: ['solo'],
+    skills: ['React'],
+    period: '1months',
+    keywords: ['WebRTC', 'Tone.js', 'ReduxToolkit', 'Firebase', 'ChakraUI'],
     urls: {
-      repository: 'https://github.com/yamori-masato/Conne',
-      site: 'https://conne-game.herokuapp.com/'
+      site: 'https://helium-chat.com'
     },
     content: [
       {
         head: 'outline',
         description: [
-          `五目並べ風対戦ボードゲームです。五目並べとぷよぷよを掛け合わせた様なルールになっています。
-          サイトにアクセスするとランダムにマッチングして対戦が始まります。`,
-          `タブを2つ開いて是非遊んでみてください。`
-        ]
-      },
-      {
-        head: 'rules',
-        images: [conne_rules_1, conne_rules_2],
-        description: [
-          `手前の3種類のコマが自分、奥側が相手のコマとなります。
-          交互にひとつずつボードに設置していき特定の配置条件を満たした方が勝利となります。
-          常に、次の相手のターンに配置されるコマの候補が見えています。勝利を狙うのも大事ですが相手に勝たせないように考えながら配置するのが鍵となります。
-          `,
+          `ボイスチェンジャー付きビデオ通話アプリです。
+          今は音程を高くするエフェクトしかかけられませんが、声質や音程を自由に調整できるようにしたいと考えています。`,
+          `より楽しめるビデオ通話アプリを目指し現在改良中です。`
         ]
       },
       {
         head: 'system',
-        images: [],
+        images: [
+
+        ],
         description: [
-          `バックエンドでは、ランダムマッチはRedis、WebSocketはRailsのActionCableを使って実装しています。
-          フロントエンドはReactで実装しています。フロントとバックそれぞれを独立させる構成をとりました。
-          `
+          `シグナリングサーバーはFirebaseのrealtime databaseで、通信はP2Pフルメッシュで実装しました。`,
+          `ボイスエフェクトはTone.jsのピッチシフターで実装しています。ストリームを送信する前に、音声トラックを加工済みの音声トラックと差し替えています。`
         ]
       },
       {
         head: 'impression',
         description: [
-          `フロントエンドに興味を持って初めてReactを触った時の作品です。
-          ゲームの進行状況はReduxで管理しました。ですが、状態遷移がそこまで複雑でなかった為、余計に複雑にしてしまうことになったのが反省点です。
-          `,
-          `これまでRubyでバックエンドを書くことがメインでしたが、今回フロントエンド↔︎バックエンドのやりとりを実装することで、より理解を深められたと思います。
-          `,
+          `今回初めて、WebRTCの技術に触れてみました。`,
+          `ブラウザのAPIとReactのコンポーネントツリーを繋ぐのが一番難しかったです。`,
+          `最初は context & reducer でやっていましたがレンダリングの制御に苦戦... Reduxはステートの実態がコンポーネントツリーの外部にあるためロジックを外に切り出しやすいと考え採用し、上手くロジックの切り分けができました。`,
+          `現時点ではP2P(フルメッシュ)での実装ですが、いずれSFUに移行したいと考えています。`,
         ]
       }
     ]
@@ -234,6 +224,62 @@ const works: schema.Work[] = [
   },
   {
     id: 5,
+    thumbnail: {
+      image: conne,
+      youtubeId: 'JVUP3XAy1iw',
+    },
+    title: 'Conne!',
+    genre: ['web', 'game'],
+    role: ['frontend', 'backend'],
+    skills: ['React', 'Rails'],
+    period: '2months',
+    keywords: ['WebSocket', 'ActionCable', 'redis', 'ReactDnD', 'styled-components', 'Redux'],
+    urls: {
+      repository: 'https://github.com/yamori-masato/Conne',
+      site: 'https://conne-game.herokuapp.com/'
+    },
+    content: [
+      {
+        head: 'outline',
+        description: [
+          `五目並べ風対戦ボードゲームです。五目並べとぷよぷよを掛け合わせた様なルールになっています。
+          サイトにアクセスするとランダムにマッチングして対戦が始まります。`,
+          `タブを2つ開いて是非遊んでみてください。`
+        ]
+      },
+      {
+        head: 'rules',
+        images: [conne_rules_1, conne_rules_2],
+        description: [
+          `手前の3種類のコマが自分、奥側が相手のコマとなります。
+          交互にひとつずつボードに設置していき特定の配置条件を満たした方が勝利となります。
+          常に、次の相手のターンに配置されるコマの候補が見えています。勝利を狙うのも大事ですが相手に勝たせないように考えながら配置するのが鍵となります。
+          `,
+        ]
+      },
+      {
+        head: 'system',
+        images: [],
+        description: [
+          `バックエンドでは、ランダムマッチはRedis、WebSocketはRailsのActionCableを使って実装しています。
+          フロントエンドはReactで実装しています。フロントとバックそれぞれを独立させる構成をとりました。
+          `
+        ]
+      },
+      {
+        head: 'impression',
+        description: [
+          `フロントエンドに興味を持って初めてReactを触った時の作品です。
+          ゲームの進行状況はReduxで管理しました。ですが、状態遷移がそこまで複雑でなかった為、余計に複雑にしてしまうことになったのが反省点です。
+          `,
+          `これまでRubyでバックエンドを書くことがメインでしたが、今回フロントエンド↔︎バックエンドのやりとりを実装することで、より理解を深められたと思います。
+          `,
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
     thumbnail: {
       image: tetris,
       youtubeId: 'Rmd2ofFcIuo',
