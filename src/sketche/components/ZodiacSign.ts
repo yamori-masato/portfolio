@@ -1,6 +1,6 @@
 import p5 from "p5";
 import Snake from "./Snake";
-import P5Component from "sketches/types/P5Component";
+import P5Component from "sketche/types/P5Component";
 
 // TODO: this.p.frameRate()から計算してアニメーション速度を一定にする
 class ZodiacSign implements P5Component {

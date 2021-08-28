@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import P5Wrapper from "react-p5-wrapper";
-import sketch from "sketches";
+import sketch from "sketche";
 
 const StyledWrapper = styled.div`
   position: absolute;

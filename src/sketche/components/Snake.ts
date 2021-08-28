@@ -1,5 +1,5 @@
 import p5 from "p5";
-import P5Component from "sketches/types/P5Component";
+import P5Component from "sketche/types/P5Component";
 
 class Snake implements P5Component {
   readonly position: p5.Vector;
