@@ -8,11 +8,11 @@ export const breakpoints = {
   },
   pc: {
     min: 1025,
-  }
-} as const
+  },
+} as const;
 
 export const queryStrings = {
   sp: `screen and (max-width: ${breakpoints.sp.max}px)`,
   tab: `screen and (min-width: ${breakpoints.tab.min}px) and (max-width: ${breakpoints.tab.max}px)`,
-  pc: `screen and (min-width: ${breakpoints.pc.min}px)`
-} as const
+  pc: `screen and (min-width: ${breakpoints.pc.min}px)`,
+} as const;

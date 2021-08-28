@@ -11,8 +11,8 @@
     "lint:eslint": "eslint --cache .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s -l -c fix:eslint fix:prettier",
-    "fix:eslint": "npm run lint:eslint --fix",
-    "fix:prettier": "npm run lint:prettier --write"
+    "fix:eslint": "eslint --cache --fix .",
+    "fix:prettier": "prettier --write ."
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",

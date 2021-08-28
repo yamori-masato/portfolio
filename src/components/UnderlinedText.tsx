@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { sp } from 'media'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { sp } from "media";
 
 const StyledTitle = styled.div`
   width: max-content;
@@ -19,7 +19,7 @@ const StyledTitle = styled.div`
   `}
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -30,20 +30,19 @@ const StyledTitle = styled.div`
     height: 1px;
     width: 58%;
   }
-`
+`;
 
 type Props = {
-  className?: string
-  as?: React.ElementType
-}
+  className?: string;
+  as?: React.ElementType;
+};
 
-
-const UnderlinedText: FC<Props> = ({children, className, as='p'}) => {
+const UnderlinedText: FC<Props> = ({ children, className, as = "p" }) => {
   return (
     <StyledTitle className={className} as={as}>
       {children}
     </StyledTitle>
-  )
-}
+  );
+};
 
-export default UnderlinedText
+export default UnderlinedText;

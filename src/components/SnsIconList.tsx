@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import SnsIcon, { TSns } from './SnsIcon'
+import React, { FC } from "react";
+import styled from "styled-components";
+import SnsIcon, { TSns } from "./SnsIcon";
 
 const StyledContainer = styled.div`
   ul {
@@ -18,11 +18,11 @@ const StyledContainer = styled.div`
       }
     }
   }
-`
+`;
 
 type Props = {
-  data: TSns[]
-}
+  data: TSns[];
+};
 
 const SnsIconList: FC<Props> = ({ data }) => {
   return (
@@ -30,16 +30,12 @@ const SnsIconList: FC<Props> = ({ data }) => {
       <ul>
         {data.map((v, i) => (
           <li key={i.toString()}>
-            <SnsIcon
-              name={v.name}
-              link={v.link}
-              svg={v.svg}
-            />
+            <SnsIcon name={v.name} link={v.link} svg={v.svg} />
           </li>
         ))}
       </ul>
     </StyledContainer>
-  )
-}
+  );
+};
 
-export default SnsIconList
+export default SnsIconList;

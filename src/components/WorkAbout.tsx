@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { HEADER_HEIGHT } from 'constants/styles'
-import ViewSourceLink from './ViewSourceLink'
-import VisitWebsite from './VisitWebsite'
-import SpeechBalloon from './SpeechBalloon'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { HEADER_HEIGHT } from "constants/styles";
+import ViewSourceLink from "./ViewSourceLink";
+import VisitWebsite from "./VisitWebsite";
+import SpeechBalloon from "./SpeechBalloon";
 
 const StyledContainer = styled.div`
   position: sticky;
   top: ${HEADER_HEIGHT}px;
-`
+`;
 
 const StyledOverview = styled.div`
   width: 100%;
@@ -34,19 +34,19 @@ const StyledOverview = styled.div`
         font-size: 1.8rem;
         &:first-child {
           margin-left: 0;
-          font-size: 2.0rem;
+          font-size: 2rem;
           font-weight: bold;
         }
       }
     }
   }
-`
+`;
 const StyledTitle = styled.h2`
   margin-top: 0;
   text-align: center;
   font-size: 2.4rem;
   font-weight: bold;
-`
+`;
 
 const StyledLinks = styled.div`
   margin-top: 20px;
@@ -55,9 +55,9 @@ const StyledLinks = styled.div`
     justify-content: space-around;
     align-items: center;
   }
-`
+`;
 
-type Props = schema.Work
+type Props = schema.Work;
 
 const WorkAbout: FC<Props> = (props) => {
   return (
@@ -65,8 +65,8 @@ const WorkAbout: FC<Props> = (props) => {
       <Overview {...props} />
       <Links {...props} />
     </StyledContainer>
-  )
-}
+  );
+};
 
 const Overview: FC<Props> = (props) => {
   return (
@@ -75,16 +75,16 @@ const Overview: FC<Props> = (props) => {
       <ul>
         <li>
           <div>Genre:</div>
-          <div>{props.genre.join('/')}</div>
+          <div>{props.genre.join("/")}</div>
         </li>
         <li>
           <div>Role:</div>
-          <div>{props.role.join('/')}</div>
+          <div>{props.role.join("/")}</div>
         </li>
         <li>
           <div>Skills:</div>
-          <div>{props.skills.join('/')}</div>
-          <SpeechBalloon keywords={props.keywords}/>
+          <div>{props.skills.join("/")}</div>
+          <SpeechBalloon keywords={props.keywords} />
         </li>
         <li>
           <div>Period:</div>
@@ -92,20 +92,28 @@ const Overview: FC<Props> = (props) => {
         </li>
       </ul>
     </StyledOverview>
-  )
-}
+  );
+};
 
 const Links: FC<Props> = ({ urls }) => {
-  const repo = urls?.repository
-  const site = urls?.site
+  const repo = urls?.repository;
+  const site = urls?.site;
   return (
     <StyledLinks>
       <ul>
-        { site && <li><VisitWebsite url={site} /></li> }
-        { repo && <li><ViewSourceLink url={repo} /></li> }
+        {site && (
+          <li>
+            <VisitWebsite url={site} />
+          </li>
+        )}
+        {repo && (
+          <li>
+            <ViewSourceLink url={repo} />
+          </li>
+        )}
       </ul>
     </StyledLinks>
-  )
-}
+  );
+};
 
-export default WorkAbout
+export default WorkAbout;

@@ -1,4 +1,4 @@
-import './MediaQueryList.prototype.addEventListener'
-import './MediaQueryList.prototype.removeEventListener'
+import "./MediaQueryList.prototype.addEventListener";
+import "./MediaQueryList.prototype.removeEventListener";
 
-export {}
+export {};

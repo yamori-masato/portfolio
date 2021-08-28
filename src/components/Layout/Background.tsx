@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import P5Wrapper from 'react-p5-wrapper'
-import sketch from 'sketches/background'
+import React, { FC } from "react";
+import styled from "styled-components";
+import P5Wrapper from "react-p5-wrapper";
+import sketch from "sketches/background";
 
 const StyledWrapper = styled.div`
   position: absolute;
@@ -9,18 +9,18 @@ const StyledWrapper = styled.div`
   background-color: #000;
   width: 100%;
   overflow-x: hidden;
-`
+`;
 
 type Props = {
-  count: number
-}
+  count: number;
+};
 
-const Background: FC<Props> = ({count}) => {
+const Background: FC<Props> = ({ count }) => {
   return (
     <StyledWrapper>
-      <P5Wrapper sketch={sketch} count={count}/>
+      <P5Wrapper sketch={sketch} count={count} />
     </StyledWrapper>
-  )
-}
+  );
+};
 
-export default Background
+export default Background;

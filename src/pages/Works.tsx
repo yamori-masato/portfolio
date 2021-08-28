@@ -1,10 +1,10 @@
-import React from 'react'
-import PageWrapper from './PageWrapper'
-import styled from 'styled-components'
-import { sp } from 'media'
-import { HEADER_HEIGHT } from 'constants/styles'
-import UnderlinedText from 'components/UnderlinedText'
-import CardList from 'components/CardList'
+import React from "react";
+import PageWrapper from "./PageWrapper";
+import styled from "styled-components";
+import { sp } from "media";
+import { HEADER_HEIGHT } from "constants/styles";
+import UnderlinedText from "components/UnderlinedText";
+import CardList from "components/CardList";
 
 const StyledContainer = styled.div`
   min-height: 100%;
@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
       margin: 50px 0;
     }
   }
-`
+`;
 
 const StyledTitle = styled(UnderlinedText)`
   font-size: 2rem;
@@ -30,7 +30,7 @@ const StyledTitle = styled(UnderlinedText)`
     font-size: 1.6rem;
   `}
   height: 32px;
-`
+`;
 
 const Works = () => {
   return (
@@ -40,7 +40,7 @@ const Works = () => {
         <CardList />
       </StyledContainer>
     </PageWrapper>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;

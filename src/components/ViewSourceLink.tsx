@@ -1,15 +1,15 @@
-import React, { FC } from 'react'
-import { snsData } from 'data/sns'
-import Icon from 'components/Icon'
-import Link from './Link'
+import React, { FC } from "react";
+import { snsData } from "data/sns";
+import Icon from "components/Icon";
+import Link from "./Link";
 
 type Props = {
-  url: string
-}
+  url: string;
+};
 
 // TODO: snsDataに依存しないようにしたい
 const ViewSourceLink: FC<Props> = ({ url }) => {
-  const github = snsData.find(v => v.name === "github")
+  const github = snsData.find((v) => v.name === "github");
   return github ? (
     <Link
       href={url}
@@ -25,7 +25,9 @@ const ViewSourceLink: FC<Props> = ({ url }) => {
       />
       <div>View source</div>
     </Link>
-  ) : (<></>)
-}
+  ) : (
+    <></>
+  );
+};
 
-export default ViewSourceLink
+export default ViewSourceLink;
